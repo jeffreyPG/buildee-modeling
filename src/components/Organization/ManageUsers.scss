@@ -1,0 +1,163 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/tables.scss';
+@import '../../styles/components/panel.scss';
+@import '../../containers/Modal/Modal.scss';
+
+.users {
+
+  .error {
+    padding: 5px 10px;
+    color: white;
+    background-color: $color-error;
+  }
+
+  &Wrap {
+
+    select {
+      min-width: 100px;
+    }
+
+    .delete-toggle {
+      position: relative;
+      text-align: right;
+
+      i {
+        margin-left: auto;
+        transition: color 250ms;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--link-color);
+        }
+      }
+      
+      > span {
+        display: block;
+        margin-left: auto;
+      }
+
+      .delete-option {
+        position: absolute;
+        right: 5px;
+        top: -5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 285px;
+        padding: 7px;
+        text-align: center;
+  
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: $color-white-dark;
+          opacity: .94;
+          box-shadow: 0px 0px 6px 0px var(--primary-color);
+        }
+  
+        span, button {
+          position: relative;
+          z-index: 20;
+          display: block;
+        }
+  
+        .button {
+          width: auto;
+          padding: 7px 12px 8px;
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+  }
+
+  &Add {
+    margin: 5px 0 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $color-gray-light;
+
+    form {
+      .button--loading {
+        cursor: default;
+
+        &:hover {
+          background-color: var(--primary-color);
+        }
+      }
+
+      .button--disabled {
+        background-color: $color-gray;
+        cursor: default;
+
+        &:hover {
+          background-color: $color-gray;
+        }
+      }
+
+      input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px white inset;
+      }
+      
+      @media (min-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        input {
+          width: calc(100% - 110px);
+          height: 40px;
+        }
+        
+        button {
+          width: 100px;
+          height: 40px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.currentUser {
+  background-color: var(--secondary-color) !important;
+  opacity: 0.75;
+}
+
+.highlightText {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.templates {
+  padding: 20px;
+
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+    }
+  }
+  &Inner {
+    max-height: 500px;
+    overflow-y: scroll;
+  }
+}
+
+.modalOuter {
+  height: auto;
+  align-self: center;
+}
+
+.modalInner {
+  width: 100%;
+  overflow-y: scroll;
+}

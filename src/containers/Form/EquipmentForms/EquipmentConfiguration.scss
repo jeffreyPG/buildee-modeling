@@ -1,0 +1,63 @@
+@import '../../../styles/main.scss';
+
+.card {
+  width: 100%;
+
+  &Content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+
+  &Element {
+    min-width: 50%;
+    padding: 10px;
+    flex-grow: 1;
+
+    &FullWidth {
+      width: 100%;
+    }
+  }
+}
+
+.link {
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.row + .row {
+  margin-top: 32px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 1em 0;
+}
+
+.column + .column {
+  padding-left: 1em;
+}
+
+.formInputField {
+  border: 1px solid $color-white-darker;
+}
+
+.formInput + .formInput {
+  margin-top: 1.2em;
+}
+
+.formInputLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: $color-gray;
+}

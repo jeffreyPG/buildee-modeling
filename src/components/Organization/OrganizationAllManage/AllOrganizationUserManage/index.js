@@ -1,0 +1,2 @@
+import AllOrganizationUserManage from './AllOrganizationUserManage'
+export default AllOrganizationUserManage

@@ -1,0 +1,392 @@
+@import '../../../styles/main.scss';
+
+.formWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.assetFormHeaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $color-white;
+  width: 100%;
+  z-index: 11;
+}
+.addButtonContainer {
+  display: flex;
+  justify-content: 'space-between';
+  flex-direction: 'row';
+}
+.addButtonContainer > button {
+  margin: 0.33em;
+}
+.width100{
+  width: 100%;
+}
+.width50 {
+  width:50%;
+}
+.formIconButton {
+  background: var(--primary-color);
+  color: $color-white;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin: 0.33em;
+  cursor: pointer;
+}
+.locationPlusIconMargin {
+    margin-top: 30px;
+    margin-left: 0px;
+}
+.locationMarginLeft {
+  margin-left: 15px;
+}
+.displayNone {
+  display: none;
+}
+.displayBlock {
+  display: flex;
+}
+.form {
+  @extend .container;
+  padding-bottom: 100px;
+
+
+  &Header{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    padding: 0 15px;
+    @media (max-width: 799px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &Container{
+      background: #fff;
+      width: 100%;
+      @media (max-width: 799px) {
+        margin-top:225px;
+      }
+    }
+
+    &Title{
+      padding-right: 2em;
+      flex-grow: 1;
+    }
+
+    &Content{
+      flex-grow: 1;
+      @media (max-width: 799px) {
+        white-space: nowrap;
+        overflow-x: scroll;
+        width: 100%;
+      }
+    }
+  }
+
+  &Section {
+    margin: 30px 0;
+
+    &Description {
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $color-gray;
+      }
+
+      @media (min-width: 800px) {
+        width: 25%;
+      }
+    }
+
+    &Inputs {
+      border-radius: 2px;
+
+      @media (min-width: 800px) {
+        width: 70%;
+        padding: 40px;
+      }
+
+      @media (min-width: 650px) {
+        padding: 20px;
+        border: 1px solid $color-white-darker;
+        background-color: $color-white;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  &Input {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input, textarea {
+      font-weight: 400;
+    }
+
+    textarea {
+      min-height: 60px;
+      max-width: 100%;
+
+      @media (min-width: 650px) {
+        min-height: 200px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Field {
+      border: 1px solid $color-white-darker;
+    }
+
+    &Row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1.2em;
+      grid-row-gap: 20px;
+    }
+
+    &Row + &Row {
+      margin-top: 1.2em;
+    }
+  }
+
+  &Source {
+
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+
+  &Close {
+    cursor: pointer;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  color: $color-gray;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  border: 1px solid $color-white-darker;
+  padding-left: 10px;
+}
+
+.selectIcons {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.selectArrow {
+  align-self: center;
+  margin-right: 0.3em;
+}
+
+.useTypeDropdown {
+  position: absolute;
+  z-index: 11;
+  top: calc(100% - 4px);
+  right: 0;
+  min-width: 180px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color: $color-black;
+  width: 100%;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+    
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+    
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+
+.spaceTypeDropdown {
+  position: absolute;
+  z-index: 11;
+  top: 0;
+  left: calc(100%);
+  min-width: 180px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color: $color-black;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+    
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+    
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+.usetypeLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

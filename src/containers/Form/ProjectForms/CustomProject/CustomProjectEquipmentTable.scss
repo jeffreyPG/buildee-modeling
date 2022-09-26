@@ -1,0 +1,223 @@
+@import '../../../../styles/main.scss';
+@import '../../../../styles/components/tables.scss';
+
+.equipmentFormTable {
+  min-height: 200px;
+
+  .scrollTableContainer {
+    overflow-x: auto;
+    width: 100%;
+
+    table {
+      table-layout: fixed;
+      width: 100%;
+      tr {
+        border-top: 1px solid $color-white-darker;
+        border-bottom: 1px solid $color-white-darker;
+      }
+      thead {
+        tr {
+          border: none;
+        }
+        th {
+          width: 150px;
+          background: $color-off-white;
+          color: $color-gray-dark;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.2px;
+          line-height: 1.5;
+          padding: 20px;
+          > div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+          }
+        }
+
+        th:first-child {
+          position: sticky;
+          left: -1px;
+          width: 200px;
+          z-index: 11;
+        }
+
+        th:last-child {
+          position: sticky;
+          right: 0;
+          width: 100px;
+          z-index: 11;
+        }
+        .groupName {
+          width: 280px !important;
+        }
+      }
+
+      tbody {
+        td {
+          width: 150px;
+          background: $color-white;
+          color: $color-gray-dark;
+          font-size: 13px;
+          font-weight: 300;
+          letter-spacing: 0.2px;
+          line-height: 1.5;
+          padding: 20px;
+          word-break: break-word;
+        }
+
+        td:first-child {
+          width: 200px;
+          position: sticky;
+          left: -1px;
+          z-index: 11;
+          box-shadow: 7px 2px 4px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        td:last-child {
+          position: sticky;
+          right: 0;
+          width: 100px;
+          z-index: 11;
+        }
+        .groupName {
+          width: 260px !important;
+        }
+      }
+
+      thead {
+        tr {
+          padding: 0px 20px;
+          &:nth-child(1) {
+            th {
+              font-weight: bold !important;
+            }
+          }
+          &:nth-child(2) {
+            th {
+              padding-top: 0px !important;
+              padding-bottom: 0px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .emptyList {
+    box-shadow: none !important;
+  }
+
+  .scrollExtra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    color: #2c3444;
+  }
+
+  .sortASC {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.groupContainer {
+  display: flex;
+  align-items: center;
+
+  .input {
+    margin-bottom: 0px;
+    width: 100%;
+  }
+
+  .iconContainer {
+    margin-left: 10px;
+    display: flex;
+    i {
+      cursor: pointer;
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+    i + i {
+      margin-left: 10px;
+    }
+  }
+
+  .scrollExtra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.projectsFinancialInput {
+  margin-bottom: 0px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $color-gray;
+  }
+
+  span {
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+    z-index: 0;
+    top: -16px;
+    left: 0;
+    padding: 11px;
+    background-color: $color-off-white;
+    border-right: 1px solid $color-white-darker;
+  }
+
+  input {
+    position: relative;
+    z-index: 1;
+    padding-left: 60px;
+    font-weight: 400;
+    background: transparent;
+
+    &:invalid {
+      border: 1px solid $color-white-darker;
+    }
+
+    &:not(:placeholder-shown):invalid {
+      border: 1px solid $color-error;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  div {
+    &:first-child {
+      width: 80%;
+    }
+    &:last-child {
+      margin-left: 10px;
+      cursor: pointer;
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+}
+
+.linkColumn {
+  width: 250px !important;
+}

@@ -1,0 +1,109 @@
+@import './Modal.scss';
+@import '../../styles/components/tabs.scss';
+
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+
+.templates {
+  padding: 20px;
+
+  .tabs {
+    margin-bottom: 20px;
+    padding-top: 0;
+
+    .tab {
+      margin: 0 20px;
+    }
+  }
+
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 18%;
+
+    & .button {
+      width: 10rem;
+    }
+  }
+}
+
+.modalOuter {
+  height: auto;
+  align-self: center;
+}
+
+.templatesList {
+  text-align: left;
+  width: 100%;
+  border-spacing: 0;
+
+  &Single {
+    padding: 18px;
+
+    @media (min-width: 700px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:nth-child(2n) {
+      background-color: $background;
+    }
+  }
+
+  &Name {
+    @media (min-width: 700px) {
+      width: calc(100% - 260px);
+    }
+  }
+
+  &Links {
+    button {
+      display: inline-block;
+      width: auto;
+      // margin: 10px 10px 0 0;
+
+      @media (min-width: 700px) {
+        margin: 0 0 0 10px;
+      }
+    }
+
+    @media (min-width: 700px) {
+      width: calc(240px);
+      text-align: right;
+    }
+  }
+}
+
+.reportSelect {
+  min-width: 150px;
+}
+
+.checkboxContainer {
+  & label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & span {
+      margin: 0 10px;
+    }
+  }
+}
+
+.maxZIndex {
+  z-index: 999999;
+}

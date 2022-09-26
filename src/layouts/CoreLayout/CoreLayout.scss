@@ -1,0 +1,10 @@
+@import '../../styles/main.scss';
+
+.core-layout {
+  background: $background;
+
+  &__viewport {
+    min-height: 100vh;
+    position: relative;
+  }
+}

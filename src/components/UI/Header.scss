@@ -1,0 +1,31 @@
+@import '../../styles/main.scss';
+
+.wrapper {
+  background: $color-white;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  @media (min-device-width : 1024px)  {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  h3 {
+    margin: 0.5em 0;
+  }
+}
+
+.content {
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: 100%;
+}
+
+.description {
+  display: none;
+  @media (min-device-width : 1024px)  {
+    display: block;
+  }
+}

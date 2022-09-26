@@ -1,0 +1,108 @@
+@import '../../styles/main.scss';
+@import '../../styles/base/_forms.scss';
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.settingContainer {
+    display: flex;
+    .baselineBlock {
+      width: calc(30% - 20px);
+      .selectContainer {
+        width: 100%;
+      }
+      .subLabel {
+        color: $color-gray;
+        font-size: 14px;
+      }
+      .methodologyValue {
+        margin-left: 15px;
+        font-size: 14px;
+      }
+      .defaultTimePeriod {
+        margin-bottom: 50px;
+      }
+    }
+    .commodityIcon {
+        padding: 10px;
+        svg {
+            width: 20px;
+            height: 20px;
+            g {
+                transform: scale(0.5);
+            }
+        }
+    }
+    .commidityBlock {
+      width: calc(70% - 20px);
+      .commodityItem {
+        padding: 15px 0;
+        border-bottom: 1px solid $color-white-darker;
+        justify-content: flex-start !important;
+        font-size: 14px;
+        svg {
+        height: 19px;
+        width: 29px;
+    
+        g {
+            transform: scale(0.5);
+        }
+        }
+    
+        &:last-child,
+        &NoBorder {
+        border-bottom: none;
+        }
+
+        .commodityTitle {
+        max-width: 150px;
+        margin-right: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        p {
+            margin-left: 10px;
+            color: $color-gray;
+        }
+        }
+        .unitsForm {
+        max-width: 100px;
+        width: 100%;
+        margin-right: 30px;
+        }
+        .siteFactors {
+        max-width: 220px;
+        width: 100%;
+        margin-right: 30px;
+        }
+        .sourceFactors {
+        max-width: 220px;
+        width: 100%;
+        }
+    
+        @media (min-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+      
+        &Input {
+          max-width: 260px;
+      
+          input {
+            max-width: 100px;
+          }
+        }
+      }
+    }
+}
+
+.saveButton {
+    width: auto;
+    align-self: flex-end;
+}

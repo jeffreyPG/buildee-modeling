@@ -1,0 +1,42 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/empty.scss';
+
+.utilitySummary {
+  text-align: left;
+  &Row {
+    display: flex;
+    border-bottom: 1px solid $color-gray;
+    padding: 0px 10px;
+    margin-top: 10px;
+    div {
+      width: 50%;
+    }
+    &:first-of-type {
+      margin-top: 0px;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  p {
+    margin: 0 0 10px 0;
+    color: $color-gray;
+  }
+
+  h1 {
+    margin-top: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.empty {
+  height: 300px;
+  &Body {
+    padding: 0px !important;
+  }
+}

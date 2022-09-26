@@ -1,0 +1,56 @@
+@import '../../../styles/main.scss';
+@import '../../../styles/components/extras.scss';
+
+.row {
+  display: grid;
+  width: 100%;
+  grid-row-gap: 1em;
+  margin: 0.5em 0 0.5em 0;
+  @media (min-device-width: 1024px) {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 1em;
+  }
+}
+
+// .row + .row {
+//   margin-top: 1em;
+// }
+
+.filter {
+  display: flex;
+  justify-content: flex-end;
+  &Button {
+    display: inline;
+    color: var(--primary-color);
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.form {
+  &Field {
+    border: 1px solid $color-white-darker;
+    margin: 0;
+  }
+
+  &Input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+  }
+}
+.label {
+  display: block;
+  margin-bottom: 10px;
+  color: $color-gray;
+}
+
+// Category, Application, and Technology dropdowns alignment only for iPad on portrait mode
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+  .schemaDropdowns {
+    display: flex;
+    justify-content: space-between;
+  }
+}

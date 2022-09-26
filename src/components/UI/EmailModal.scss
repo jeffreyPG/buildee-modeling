@@ -1,0 +1,134 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/empty.scss';
+@import '../../styles/components/tables.scss';
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(var(--secondary-color), 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &Inner {
+    width: 670px;
+    margin: 20px;
+    box-shadow: 0 0 110px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+    text-align: center;
+  }
+
+  &EmailInner {
+    width: 670px;
+    margin: 20px;
+    box-shadow: 0 0 110px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+    .form {
+      padding-bottom: 0px !important;
+    }
+  }
+
+  &StatusEmailInner {
+    width: 500px;
+    margin: 20px;
+    box-shadow: 0 0 110px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+
+  &Heading {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $color-gray-lightest;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+  &Body {
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  &EmailBody {
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &StatusBody {
+    padding: 20px 20px 30px 20px;
+  }
+
+  &Footer {
+    padding: 0px 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid $color-gray-lightest;
+    button {
+      &:first-child,
+      &:last-child {
+        width: 20%;
+      }
+      &:nth-child(2n) {
+        width: 50%;
+      }
+    }
+  }
+
+  &EmailFooter {
+    padding: 0px 20px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $color-gray-lightest;
+    button {
+      width: 20%;
+    }
+    button + button {
+      margin-left: 20px;
+    }
+  }
+
+  &Close {
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.modalEmpty {
+  margin-top: 150px;
+  &Description {
+    p + p {
+      margin-top: -20px;
+    }
+  }
+}
+
+.formError {
+  color: $color-error;
+}
+
+.textCenter {
+  text-align: center;
+}

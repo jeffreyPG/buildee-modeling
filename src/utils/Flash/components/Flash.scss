@@ -1,0 +1,64 @@
+@import '../../../styles/main.scss';
+
+.flash {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  z-index: 100;
+  transition: bottom 300ms ease-in-out;
+
+  > div {
+    display: inline-block;
+    padding: 20px;
+    color: var(--header-text-color);
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 15px 0px white;
+    cursor: pointer;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &--show{
+    bottom: 50px;
+  }
+  
+  &--hidden,
+  &--hide{
+    bottom: -100px;
+  }
+
+  &--success{
+    border: 3px solid $color-success;
+
+    i {
+      color: $color-success;
+    }
+  }
+  
+  &--error{
+    border: 3px solid $color-error;
+
+    i {
+      color: $color-error;
+    }
+  }
+  
+  &--warning{
+    border: 3px solid $color-warning;
+
+    i {
+      color: $color-warning;
+    }
+  }
+
+
+}
+

@@ -1,0 +1,133 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/empty.scss';
+@import '../../styles/components/extras.scss';
+
+.utilitySummary {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  &Row {
+    display: flex;
+    border-bottom: 1px solid $color-gray;
+    padding: 0px 10px;
+    margin-top: 10px;
+    div {
+      width: 50%;
+    }
+    &:first-of-type {
+      margin-top: 0px;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .valueItem {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .summaryContent {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      width: calc(50% - 20px);
+    }
+    .valueBlock {
+      width: 45%;
+    }
+    .chartBlock {
+      width: 50%;
+      .chartSettingContent {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .selectContainer {
+          select {
+            font-size: 13px;
+          }
+        }
+        .chartTypeContainer {
+          margin-right: 30px;
+          max-width: 195px;
+        }
+        .baselineLabel {
+          position: absolute;
+          left: 76px;
+          bottom: -29px;
+          font-size: 10px;
+          opacity: 0.8;
+        }
+      }
+    }
+    .valueItem {
+      display: flex;
+      & > div {
+        width: calc(100% / 3);
+        color: #2C3444;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      p.baseline {
+        color: var(--primary-color);
+        .materialIcons {
+          font-size: 12px;
+          margin-top: -4px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .downValue {
+    color: var(--primary-color);
+  }
+  .sameValue {
+    color: $color-gray;
+  }
+  .largeValue {
+    color: $color-red;
+  }
+  
+  .breakdownTooltip {
+    p {
+      color: $color-white !important;
+      margin: 0 0 10px 0;
+      font-size: 13px;
+    }
+  }
+}
+
+.empty {
+  height: 300px;
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+    button + button {
+      margin-left: 100px;
+    }
+  }
+}
+
+.timeRangeFilter {
+  display: flex;
+  flex: 0;
+  padding: 12px 6px;
+  align-items: center;
+  border: 1px solid $color-gray-lightest;
+  flex-direction: row-reverse;
+  font-size: 13px;
+  cursor: pointer;
+}

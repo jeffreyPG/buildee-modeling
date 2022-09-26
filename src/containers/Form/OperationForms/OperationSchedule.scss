@@ -1,0 +1,91 @@
+@import '../../../styles/main.scss';
+
+.formIconButton {
+  background: var(--primary-color);
+  color: $color-white;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin: 0.33em;
+  cursor: pointer;
+}
+
+.daySchedule {
+
+  &Wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &Body{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 0px 2px $color-gray-lightest;
+  }
+
+  &Label {
+    color: black;
+  }
+
+  &Delete {
+    font-size: 10px !important;
+    background-color: $color-gray;
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    &:hover {
+      background-color: lighten($color-gray, 20%);
+    }
+
+    &.buttonDisable {
+      background-color: lighten($color-gray, 20%);
+    }
+  }
+
+  &Period{
+    width: auto;
+    margin: 0 50px 0 0;
+
+    label {
+      display: none;
+    }
+  }
+
+  &Value{
+    width: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 0;
+    align-items: baseline;
+
+    input {
+      width: 60px;
+      margin-right: 10px;
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.operationalDaySchedule{
+  width: 65%;
+  &Body{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 0px 2px $color-gray-lightest;
+  }
+  &Field{
+    width: 45%;
+  }
+}

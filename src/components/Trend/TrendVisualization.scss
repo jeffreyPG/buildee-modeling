@@ -1,0 +1,121 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tables.scss';
+
+.trendVisualization {
+
+  &Wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+      position: relative;
+      margin: 10px 0;
+    
+      @media (min-width: 800px) {
+        width: calc(50% - 10px);
+      }
+    }
+
+    > p {
+      margin-top: 0;
+    }
+  }
+
+  .customTooltip {
+    min-width: 160px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    border: none;
+
+    p {
+      margin: 5px 0;
+      color: $color-white;
+
+      span {
+        display: inline-block;
+        margin-left: 5px;
+        font-size: 14px;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.tableToggle, .orgSelectHeader {
+  width: 100%;
+  border-top: 1px solid $color-white-darker;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  cursor: pointer;
+
+  small {
+    display: block;
+    padding: 15px 0;
+  }
+}
+
+.orgSelect {
+  border-bottom: 1px solid $color-white-darker;
+
+  &Header {
+    border-top: none;
+  }
+
+  &Content {
+    display: flex;
+
+    label {
+      display: flex;
+      width: calc(48% - 10px);
+      margin-right: 10px;
+      cursor: pointer;
+
+      span {
+        margin-top: 0;
+      }
+    }
+
+    .currentOrg + span {
+      opacity: .50;
+    }
+  }
+}
+
+.trend {
+  &Chart {
+    padding: 20px 30px;
+
+    &.addMargin {
+      margin-bottom: 50px;
+    }
+  }
+  
+  &Results {
+    padding: 20px 30px;
+  }
+}
+
+.trendChangePoint {
+
+  .tableToggle {
+    &.hide {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .tableHeader {
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

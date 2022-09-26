@@ -1,0 +1,86 @@
+
+/*------------------------------------*\
+    ::Variables
+\*------------------------------------*/
+@import 'base/_variables.scss';
+
+
+/*------------------------------------*\
+    ::HTML elements
+\*------------------------------------*/
+@import 'base/_elements.scss';
+
+
+/*------------------------------------*\
+    ::Buttons
+\*------------------------------------*/
+@import 'base/_buttons.scss';
+
+
+/*------------------------------------*\
+    ::Lists
+\*------------------------------------*/
+@import 'base/_lists.scss';
+
+
+/*------------------------------------*\
+    ::Forms
+\*------------------------------------*/
+@import 'base/_forms.scss';
+
+
+/*------------------------------------*\
+    ::Tables
+\*------------------------------------*/
+@import 'base/_tables.scss';
+
+/*------------------------------------*\
+    ::Layout
+\*------------------------------------*/
+@import 'base/_layout.scss';
+
+
+
+:global(.bodyModalOpen) {
+  overflow: hidden;
+}
+
+
+//**** icons ****//
+:global(.material-icons) {
+  // required
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 130%;
+  line-height: inherit;
+  vertical-align: text-top;
+  display: inline-block;
+  // resetters
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  // optimizers
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+:global(.warning) {
+  color: $color-warning;
+  padding-right: 5px;
+}
+
+:global(.fa-exclamation-triangle) {
+  color: $color-warning;
+  padding-right: 5px;
+}
+
+:global(.fa-exclamation-circle) {
+  color: $color-warning;
+  padding-right: 5px;
+}

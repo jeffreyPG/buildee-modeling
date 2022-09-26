@@ -1,0 +1,90 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tabs.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/empty.scss';
+
+.operations {
+  margin-top: 10px;
+  text-align: left;
+
+  .tabs {
+    padding-bottom: 20px;
+    background: transparent;
+    border-bottom: none;
+
+    .container {
+      padding: 0;
+    }
+
+    .tab {
+      padding-bottom: 15px;
+    }
+  }
+
+  &Empty {
+    padding-top: 20px;
+    text-align: center;
+
+    button {
+      width: auto;
+      margin: auto;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  &Heading {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: $color-gray;
+    }
+
+    button {
+      width: auto;
+      margin: 0;
+
+      i {
+        margin-right: 10px;
+      }
+    
+      span {
+        display: none;
+    
+        @media (min-width: 600px) {
+          display: inline;
+        }
+      }
+    }
+
+    &Buttons {
+      display: flex;
+    }
+
+    .extras {
+      margin-left: 10px;
+
+      &Dropdown {
+        width: 165px;
+      }
+    }
+  }
+}
+
+.empty{
+  margin-top: 100px;
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,308 @@
+[
+    {
+        "name": "AERCO BMK 1000",
+        "type": "BOILER",
+        "fuel": "NATURAL_GAS",
+        "description": null,
+        "category": "HEATING",
+        "application": "BOILER",
+        "technology": "HOT_WATER_BOILER",
+        "params": {
+            "search": "aerco bmk 1000",
+            "field": "fuel",
+            "fieldInitialValue": "NATURAL_GAS",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "Mammoth ULLINE09992601",
+        "type": "AIR_COOLED_CONDENSER",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "CONDENSER",
+        "technology": "AIR_COOLED_CONDENSER",
+        "params": {
+            "search": "mammoth",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "YORK BY JOHNSON CONTROLS DHMF12NWM42Q1A",
+        "type": "AIR_COOLED_CHILLER",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "CHILLER",
+        "technology": "AIR_COOLED_CHILLER",
+        "params": {
+            "search": "york by johnson controls",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "MARVAIR VAISA60HPC",
+        "type": "SINGLE_PKG_VERTICAL_HEAT_PUMP",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "HEATING_AND_COOLING",
+        "application": "HEAT_PUMP",
+        "technology": "SINGLE_PACKAGE_VERTICAL_HEAT_PUMP",
+        "params": {
+            "search": "marvair",
+            "field": "model",
+            "fieldInitialValue": "A20G3AHA30-CX",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "SUPERIOR REX AH06",
+        "type": "FAN_COIL_UNIT",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "HEATING_AND_COOLING",
+        "application": "FAN_COIL_UNIT",
+        "technology": null,
+        "params": {
+            "search": "superior rex ah06",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "STERLING RO1",
+        "type": "FINNED_TUBE_RADIATION",
+        "fuel": "NA",
+        "description": null,
+        "category": "HEATING",
+        "application": "RADIANT",
+        "technology": "RADIATOR",
+        "params": {
+            "search": "sterling r01",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "ENERGENCE LGH360**VH**",
+        "type": "FURNACE",
+        "fuel": "NATURAL_GAS",
+        "description": null,
+        "category": "HEATING",
+        "application": "FURNACE",
+        "technology": null,
+        "params": {
+            "search": "energence lgh360",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "LAARS MT2V0200",
+        "type": "HOT_WATER_HEATER",
+        "fuel": "NATURAL_GAS",
+        "description": null,
+        "category": "WATER_HEATING",
+        "application": "INSTANTANEOUS",
+        "technology": null,
+        "params": {
+            "search": "laars mt2v0200",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "tagID",
+            "configInitialValue": "ajklshfjk33h4",
+            "configUpdateValue": "jkerhajfhewr"
+        }
+    },
+    {
+        "name": "CFQ22/1 - Compact Fluorescent, quad, (1) 22W lamp",
+        "type": "LIGHTING",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "LIGHTING",
+        "application": "FIXTURE",
+        "technology": null,
+        "params": {
+            "search": "cfq22",
+            "field": "ballastFactor",
+            "fieldInitialValue": "1.11",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "GREE GWC36LB-D3DN**A/I",
+        "type": "MINI_SPLIT_AND_MULTI_SPLIT_AC",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "AIR_CONDITIONER",
+        "technology": "SPLIT_DX_AIR_CONDITIONER",
+        "params": {
+            "search": "gree gwc36lb",
+            "field": "brand",
+            "fieldInitialValue": "GREE",
+            "config": "tagID",
+            "configInitialValue": "f23342fwh",
+            "configUpdateValue": "ehfi3uh34"
+        }
+    },
+    {
+        "name": "FUJITSU AUU18RCLX",
+        "type": "MINI_SPLIT_AND_MULTI_SPLIT_HP",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "HEATING_AND_COOLING",
+        "application": "HEAT_PUMP",
+        "technology": "SPLIT_HEAT_PUMP",
+        "params": {
+            "search": "fujitsu active",
+            "field": "brand",
+            "fieldInitialValue": "FUJITSU",
+            "config": "tagID",
+            "configInitialValue": "f23342fwh",
+            "configUpdateValue": "ehfi3uh34"
+        }
+    },
+    {
+        "name": "AMANA PTC073E00******",
+        "type": "PTAC",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "AIR_CONDITIONER",
+        "technology": "PACKAGED_TERMINAL_AIR_CONDITIONER_PTAC",
+        "params": {
+            "search": "amana ptc073e00",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "LG LP155HED1",
+        "type": "PTHP",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "HEATING_AND_COOLING",
+        "application": "HEAT_PUMP",
+        "technology": "PACKAGED_TERMINAL_HEAT_PUMP_PTHP",
+        "params": {
+            "search": "lg lp155hed1",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "MARVAIR AVPA24ACA",
+        "type": "SINGLE_PKG_VERTICAL_AC",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "AIR_CONDITIONER",
+        "technology": "SINGLE_PACKAGE_VERTICAL_AIR_CONDITIONER",
+        "params": {
+            "search": "marvair avpa24aca",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "MARVAIR VAISA60HPA",
+        "type": "SINGLE_PKG_VERTICAL_HEAT_PUMP",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "HEATING_AND_COOLING",
+        "application": "HEAT_PUMP",
+        "technology": "SINGLE_PACKAGE_VERTICAL_HEAT_PUMP",
+        "params": {
+            "search": "marvair vaisa60hpa",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "NORDYNE P6SP-120C",
+        "type": "UNITARY_AC",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "AIR_CONDITIONER",
+        "technology": "PACKAGED_UNITARY_DX_RTU",
+        "params": {
+            "search": "nordyne p6sp",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "FPV FPV 205",
+        "type": "VAV",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "AIR_DISTRIBUTION",
+        "application": "VAV",
+        "technology": null,
+        "params": {
+            "search": "fpv 205",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    },
+    {
+        "name": "CENTRAVAC 60 HERTZ CVHE 320",
+        "type": "WATER_COOLED_CHILLER",
+        "fuel": "ELECTRIC",
+        "description": null,
+        "category": "COOLING",
+        "application": "CHILLER",
+        "technology": "WATER_COOLED_CHILLER",
+        "params": {
+            "search": "centravac cvhe 320",
+            "field": "model",
+            "fieldInitialValue": "AAA",
+            "config": "yearOfInstallation",
+            "configInitialValue": "1999",
+            "configUpdateValue": "2001"
+        }
+    }
+]

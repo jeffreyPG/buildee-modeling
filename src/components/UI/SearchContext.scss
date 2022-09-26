@@ -1,0 +1,103 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tags.scss';
+@import '../../styles/components/tables.scss';
+
+.SearchContext {
+  &Empty {
+    padding-top: 40px;
+    text-align: center;
+
+    button {
+      width: auto;
+      margin: auto;
+    }
+  }
+
+  &Extras {
+    padding: 20px 0;
+    margin: 0 -5px;
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &Custom {
+    flex-grow: 0;
+    align-self: stretch;
+    margin: 0px 5px;
+    button {
+      height: 100%;
+      margin: 0px;
+      padding: 10px 15px;
+    }
+  }
+
+  &Search {
+    position: relative;
+    flex: 2;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    input {
+      padding: 12px 10px 12px 50px;
+
+      ::placeholder {
+        color: $color-gray-dark;
+      }
+    }
+
+    i {
+      /* eyeglass icon */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      color: $color-gray-dark;
+    }
+
+    @media (min-width: 800px) {
+      margin-top: 0;
+    }
+  }
+
+  &Filter {
+    flex: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    @media (min-width: 800px) {
+      display: flex;
+      align-items: flex-start;
+
+      > div {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &Spinner {
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  .table {
+    &Header {
+      div {
+        cursor: pointer;
+      }
+    }
+  }
+  &Title {
+    padding: 20px 0px;
+  }
+}
+
+.disabled {
+  background-color: #f3f4f4;
+  border: 1px solid #e8edf1;
+}

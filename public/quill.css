@@ -1,0 +1,6 @@
+.ql-container {
+  white-space: pre-wrap !important;
+}
+.ql-container .quill-editor {
+  white-space: normal !important;
+}

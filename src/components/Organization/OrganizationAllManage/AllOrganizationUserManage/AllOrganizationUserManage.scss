@@ -1,0 +1,190 @@
+@import '../../../../styles/main.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.loader {
+  position: fixed;
+  bottom: 120px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  z-index: 11;
+}
+
+.tableRowRemoveItem {
+  cursor: pointer;
+  i {
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  i + i {
+    margin-left: 16px;
+  }
+}
+
+.linkButton {
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.scrollTableContainer {
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid $color-white-darker;
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    tr {
+      border-top: 1px solid $color-white-darker;
+      border-bottom: 1px solid $color-white-darker;
+      cursor: pointer;
+    }
+    thead {
+      .firstRow {
+        border: unset;
+        border-bottom: 1px solid $color-white-darker;
+      }
+      tr {
+        border: none;
+      }
+      th {
+        width: 130px;
+        background: $color-off-white;
+        color: $color-gray-dark;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        line-height: 1.5;
+        padding: 20px 10px 20px 10px;
+        cursor: pointer;
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        i {
+          margin-top: -3px;
+        }
+      }
+
+      th:first-child {
+        position: sticky;
+        left: -1px;
+        width: 250px;
+        z-index: 2;
+        text-align: left;
+      }
+      th:nth-child(2) {
+        width: 250px;
+        overflow: hidden;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      td {
+        width: 130px;
+        background: $color-white;
+        color: $color-gray-dark;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        line-height: 1.5;
+        padding: 20px;
+        cursor: pointer;
+      }
+
+      td:first-child {
+        position: sticky;
+        left: -1px;
+        width: 250px;
+        z-index: 10;
+        box-shadow: 7px 2px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+      td:nth-child(2) {
+        width: 250px;
+        overflow: hidden;
+      }
+      .checkboxContainer {
+        display: flex;
+        justify-content: center;
+
+        span {
+          &::before {
+            top: 0px !important;
+            z-index: 9;
+          }
+        }
+      }
+      .tableRowRemoveItem {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.sortASC {
+  i {
+    transform: rotate(180deg);
+  }
+}
+
+.whiteText {
+  color: #fff !important;
+}
+
+.iconDisabled {
+  pointer-events: none;
+  color: $color-gray-light;
+  cursor: default;
+  &:hover {
+    color: $color-gray-light;
+  }
+}
+
+.withCheckSave {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  > i {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+}
+
+.linkButtonDisabled {
+  pointer-events: none;
+  color: $color-gray-light;
+  cursor: default;
+}
+
+.bold {
+  font-weight: 800 !important;
+}
+
+.headerColumn {
+  text-align: left;
+  width: 260px !important;
+}
+
+.disabledCheckBoxContainer {
+  pointer-events: none !important;
+  input {
+    &.checked + span:after {
+      background-color: $color-gray;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../../styles/main.scss';
+
+.section {
+  margin-left: 40px;
+
+  @media (max-width: 1050px) {
+    margin-left: 0px;
+  }
+
+  &Container {
+    margin-left: 75px;
+    width: calc(100% - 100px);
+    @media (max-width: 1050px) {
+      margin-left: 0px;
+      width: calc(100%);
+    }
+  }
+
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Arrow {
+    font-size: 32px;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-success;
+    }
+  }
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}

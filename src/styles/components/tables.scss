@@ -1,0 +1,173 @@
+/*
+  *
+  * Include these styles below to apply special styling (like the building and projects tables)
+  *
+*/
+
+.table {
+  line-height: 1.5;
+  font-size: 14px;
+  
+  @media (min-width: 700px) {
+    background-color: $color-white;
+    border: 1px solid $color-white-darker;
+  }
+
+  &Header {
+    display: none;
+    
+    @media (min-width: 700px) {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 20px 10px;
+      font-size: 13px;
+      background-color: $color-off-white;
+      border-bottom: 1px solid $color-white-darker;
+  
+      i {
+        cursor: pointer;
+      }
+  
+      &SortASC {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &Row {
+    padding: 20px 10px;
+    
+    @media (max-width: 699px) {
+      background-color: $color-white;
+      border: 1px solid $color-white-darker;
+      margin: -1px 10px;
+    }
+    
+    @media (min-width: 700px) {
+      display: flex;
+      flex-flow: row;
+      flex-wrap: wrap;
+      width: 100%;
+      border-bottom: 1px solid $color-white-darker;
+  
+      &:nth-of-type(odd) { 
+        background-color: $color-off-white;
+      }
+      
+      &Item {
+        display: flex;
+        flex-flow: row nowrap;
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 0 10px;
+        align-items: center;
+  
+        // generate Flexbox grow-rate utility classes
+        @for $i from 1 through 10 {
+          &_#{$i} {
+            flex-grow: $i;
+          }
+        }
+  
+      }
+    }
+  }
+
+  &Mobile {
+    @media (max-width: 699px) {
+
+      &OpenInfo { // the down arrow to expand and hide info
+        padding: 5px 20px 10px 0;
+        cursor: pointer;
+      }
+      
+      &RowActive { // the outer box of the single row item
+        margin: 0;
+      }
+
+      &RowItem { // items inside the row that are hidden in the drop down
+        display: none;
+
+        label {
+          min-width: 120px;
+          padding-right: 10px;
+        }
+        
+        &Active {
+          display: flex;
+          align-items: center;
+        }
+
+        // generate Flexbox grow-rate utility classes
+        @for $i from 1 through 10 {
+          &_#{$i} {
+            flex-grow: $i;
+          }
+        }
+      }
+
+      &Box { // creates the lines for the box
+        &Top {
+          position: relative;
+          padding: 10px;
+          border-top: 1px solid $color-white-darker;
+          border-left: 1px solid $color-white-darker;
+          border-right: 1px solid $color-white-darker;
+          margin-top: 20px;
+          
+          &:after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+            height: 1px;
+            width: calc(100% - 20px);
+            background-color: $color-white-darker;
+          }
+        }
+  
+        &Middle {
+          position: relative;
+          padding: 10px;
+          border-left: 1px solid $color-white-darker;
+          border-right: 1px solid $color-white-darker;
+
+          &:after {
+            content: '';
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+            height: 1px;
+            width: calc(100% - 20px);
+            background-color: $color-white-darker;
+          }
+        }
+  
+        &Bottom {
+          padding: 10px;
+          border-bottom: 1px solid $color-white-darker;
+          border-left: 1px solid $color-white-darker;
+          border-right: 1px solid $color-white-darker;
+          margin-bottom: 10px;
+        }
+      }
+
+      &Hide {
+        display: none;
+      }
+    }
+
+    @media (min-width: 700px) {
+
+      &Show {
+        display: none;
+      }
+
+    }
+  }
+
+}

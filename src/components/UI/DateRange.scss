@@ -1,0 +1,47 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.dateRangeContainer {
+  width: 440px;
+  border: 2px solid $color-gray-lightest;
+  position: absolute;
+  z-index: 20;
+  background-color: $color-white;
+  box-shadow: 0 1px 8px 0 $color-gray;
+  top: calc(100% - 30px);
+
+  &Header {
+    background-color: var(--primary-color);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+  }
+
+  &Body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  &Footer {
+    padding: 0px 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    > button {
+      width: 45%;
+    }
+  }
+}
+
+.dateRangeField {
+  width: 45%;
+}
+
+.deleteIcon {
+  cursor: pointer;
+}

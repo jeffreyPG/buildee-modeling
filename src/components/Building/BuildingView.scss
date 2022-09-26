@@ -1,0 +1,23 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/tabs.scss';
+
+.buildingView {
+  text-align: center;
+  min-height: $minusHeader;
+  padding-bottom: 40px;
+  background: $background;
+
+  &Tabs {
+    height: 64px;
+    overflow: hidden;
+
+    .tabs {
+      overflow-x: scroll;
+      white-space: nowrap;
+    }
+
+    .container {
+      min-width: 570px;
+    }
+  }
+}

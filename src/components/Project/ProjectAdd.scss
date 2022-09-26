@@ -1,0 +1,53 @@
+@import '../../styles/main.scss';
+
+.projectAdd {
+  position: relative;
+
+  .scrollLine {
+    position: absolute;
+    top: -130px;
+  }
+
+  &Header {
+    background-color: $color-white;
+    border-bottom: 1px solid $color-white-darker;
+
+    h2 {
+      margin: 0;
+      padding: 20px 0 10px;
+    }
+
+    p {
+      margin-top: 0;
+      font-size: 14px;
+      color: $color-gray;
+    }
+  }
+
+  &Back {
+  	position: absolute;
+  	font-size: 25px;
+  	bottom: 10px;
+    left: 15px;
+    cursor: pointer;
+
+    &:hover {
+    	color: var(--primary-color);
+    }
+  }
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  p {
+    margin-right: 30px;
+  }
+  p:first-child{
+    margin-left: 0px;
+  }
+
+  @media (max-width: 650px) {
+    display: block;
+  }
+}

@@ -1,0 +1,202 @@
+@import '../../../styles/main.scss';
+@import '../../../styles/components/extras.scss';
+@import '../../../styles/components/tabs.scss';
+
+.columnModalContainer {
+  position: absolute;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 1px 8px 0 #858c92;
+  width: 750px;
+  right: 0;
+  &Header {
+    background-color: var(--primary-color);
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 2px solid #E6E8EC;
+  }
+  &Body {
+    display: flex;
+    border-bottom: 1px solid #E9EDF1;
+  }
+  &Footer {
+    padding: 0px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    > button {
+      width: 30%;
+      margin-left: 10px;
+    }
+  }
+  @media (min-width: 650px) and (max-width:700px) {
+    width: 450px;
+  }
+  @media (min-width: 700px) and (max-width:750px) {
+    width: 500px;
+  }
+  @media (min-width: 750px) and (max-width:800px) {
+    width: 550px;
+  }
+  @media (min-width: 800px) {
+    width: 600px;
+  }
+}
+.deleteIcon {
+  cursor: pointer;
+}
+.columnRow {
+  width: 50%;
+  &Header {
+    border-bottom: 1px solid #E9EDF1;
+    border-left: 1px solid #e9edf1;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    label {
+      width: 88%;
+    }
+    i {
+      max-height: 24px;
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  &Body {
+    height: 435px;
+    overflow-y: auto;
+    border-left: 1px solid #e9edf1;
+    &Name {
+      label{
+        width: 88% !important;
+      }
+    }
+    &Item {
+        border-bottom: 1px solid #E9EDF1;
+        display: flex;
+        padding: 20px;
+        justify-content: space-between;
+        label{
+          width: 75%;
+        }
+        i {
+          max-height: 24px;
+          min-height: 24px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      @media (min-height:650px) {
+        height: 100px;
+      }
+      @media (min-height:700px) {
+        height: 150px;
+      }
+      @media (min-height:750px) {
+        height: 200px;
+      }
+      @media (min-height:800px) {
+        height: 250px;
+      }
+      @media (min-height:850px) {
+        height: 300px;
+      }
+      @media (min-height:900px) {
+        height: 350px;
+      }
+      @media (min-height:1000px) {
+        height: 435px;
+      }
+    }
+}
+.saveColumn {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  span {
+    color: var(--primary-color);
+    display: block;
+    font-size: 12px;
+  }
+}
+.title {
+  padding: 20px;
+  font-weight: bold;
+  border: 1px solid #E9EDF1;
+}
+.removeIcon {
+  font-size: 20px !important;
+  
+  background-color: #4C5656;
+  color: $color-white;
+  border-radius: 50%;
+  padding: 0.1em;
+  cursor: pointer;
+  &:hover {
+    background-color: lighten($color-gray, 20%);
+  }
+  &.buttonDisable {
+    background-color: lighten($color-gray, 20%);
+  }
+}
+.__input {
+  width: 30px;
+  margin: 0px;
+  height: 30px;
+}
+.inlineInput {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  &:focus {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 0;
+  }
+}
+.nameInput {
+  padding-top: 5px;
+}
+.disabledCursor {
+  cursor: not-allowed;
+}
+.moveCursor {
+  cursor: move;
+}
+.centerIcon {
+  display: flex;
+  align-items: center;
+}
+.ColumnOptionContainer{
+  height: 460px;
+  @media (min-height:650px) and (max-height:700px) {
+    height: 155px;
+  }
+  @media (min-height:700px) and (max-height:750px) {
+    height: 215px;
+  }
+  @media (min-height:750px) and (max-height:800px) {
+    height: 265px;
+  }
+  @media (min-height:800px) and (max-height:850px) {
+    height: 315px;
+  }  
+  @media (min-height:850px) and (max-height:900px) {
+    height: 365px;
+  }
+  @media (min-height:900px) and (max-height:1000px) {
+    height: 415px;
+  }
+  @media (min-height:1000px) {
+    height: 460px;
+  }
+}

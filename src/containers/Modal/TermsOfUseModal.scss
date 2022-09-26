@@ -1,0 +1,19 @@
+@import './Modal.scss';
+
+.termsModal {
+  .terms {
+    padding: 25px;
+    svg {
+      height: 50px;
+    }
+    
+    &Text {
+      text-align: left;
+  
+      p:first-of-type {
+        text-align: center;
+      }
+    }
+  }
+  
+}

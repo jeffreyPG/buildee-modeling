@@ -1,0 +1,105 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/empty.scss';
+
+.utilityRates {
+
+  .panelContent {
+    &.extraPadding {
+      padding-bottom: 60px;
+    }
+  }
+
+  &Display,
+  &Form {
+    text-align: left;
+
+    span {
+      display: inline-block;
+      color: $color-gray;
+      margin-bottom: 10px;
+      
+      i {
+        color: $color-black;
+        margin-right: 10px;
+      }
+      
+      @media (min-width: 600px) {
+        margin-bottom: 0px;
+      }
+    }
+
+    p {
+      margin: 0;
+      
+      &.utilityRatesEmpty {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &Single {
+    padding: 15px 0;
+    border-bottom: 1px solid $color-white-darker;
+
+    svg {
+      height: 19px;
+      width: 29px;
+
+      g {
+        transform: scale(0.5);
+      }
+    }
+
+    &:last-child,
+    &NoBorder {
+      border-bottom: none;
+    }
+
+    @media (min-width: 600px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &Input {
+    max-width: 240px;
+
+    input {
+      max-width: 100px
+    }
+  }
+
+  .tableToggle {
+    width: 100%;
+    border-top: 1px solid $color-white-darker;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    cursor: pointer;
+
+    &.show {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    small {
+      display: block;
+      padding: 15px 0;
+    }
+  }
+
+  .factors {
+    padding-top: 0;
+  }
+}
+
+.empty{
+  height: 300px;
+  &Body {
+    padding: 0px !important;
+  }
+}

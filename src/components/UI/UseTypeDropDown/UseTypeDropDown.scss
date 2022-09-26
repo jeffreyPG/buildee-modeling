@@ -1,0 +1,209 @@
+@import '../../../styles/main.scss';
+
+.main {
+  background: $color-white;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 46px;
+  border: 1px solid $color-white-darker;
+  padding-left: 10px;
+  span {
+    background-color: transparent !important;
+    color: $color-text !important;
+    text-align: left !important;
+    font-size: unset !important;
+    padding-left: 0px !important;
+  }
+}
+
+.selectIcons {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+  font-size: 18px;
+}
+
+.selectArrow {
+  align-self: center;
+  margin-right: 0.3em;
+}
+
+.firstDropdown {
+  position: absolute;
+  z-index: 11;
+  top: calc(100% - 4px);
+  right: 0;
+  min-width: 180px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color: $color-black;
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+
+.secondDropdown {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  left: 0;
+  min-width: 180px;
+  max-width: 300px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color: $color-black;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+.usetypeLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

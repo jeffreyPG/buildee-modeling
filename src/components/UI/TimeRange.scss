@@ -1,0 +1,81 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.timeRangeContainer {
+  min-width: 400px;
+  border: 2px solid $color-gray-lightest;
+  position: absolute;
+  z-index: 20;
+  background-color: $color-white;
+  box-shadow: 0 1px 8px 0 $color-gray;
+
+  &.leftModal {
+    left: 0;
+  }
+
+  &.rightModal {
+    right: 0;
+  }
+
+  &Header {
+    background-color: var(--primary-color);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $color-white;
+  }
+
+  &Body {
+    padding: 20px;
+  }
+
+  &Footer {
+    padding: 0px 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      width: auto;
+    }
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.deleteIcon {
+  cursor: pointer;
+}
+
+.fullWidth {
+  width: 100%;
+
+  span {
+    margin-bottom: 10px;
+  }
+}
+
+.selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &Item {
+    width: 150px;
+  }
+
+  &Input {
+    width: 150px;
+  }
+}
+.validationError {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: $color-red;
+  justify-content: center;
+  padding-top: 20px;
+}

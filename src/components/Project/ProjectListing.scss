@@ -1,0 +1,271 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/tabs.scss';
+@import '../../styles/components/tables.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/empty.scss';
+
+.projectListing {
+  background: $background;
+  &Library {
+    background: $background !important;
+    border-bottom: none !important;
+  }
+  &Title {
+    background-color: $color-white;
+
+    h3 {
+      margin: 0;
+      padding: 20px 0;
+
+      @media (max-width: 400px) {
+        font-size: 92%;
+        padding: 10px 0;
+      }
+    }
+
+    @media (max-width: 650px) {
+      padding: 0 10px;
+    }
+  }
+
+  &Tools {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  &Filter {
+    margin-bottom: 10px;
+
+    .selectContainer {
+      &.hide {
+        @media (max-width: 749px) {
+          display: none;
+        }
+      }
+
+      @media (min-width: 750px) {
+        margin-left: 10px;
+      }
+    }
+
+    &Header {
+      @media (max-width: 749px) {
+        display: none;
+      }
+    }
+
+    &Mobile {
+      padding: 15px 20px;
+      border-bottom: 1px solid $color-white-darker;
+
+      div,
+      h3 {
+        margin: 0;
+        display: inline-block;
+      }
+
+      i {
+        cursor: pointer;
+      }
+
+      @media (min-width: 750px) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 749px) {
+      margin-bottom: 20px;
+      border: 1px solid $color-white-darker;
+      background-color: $color-white;
+      border-radius: 4px;
+    }
+
+    @media (min-width: 750px) {
+      display: flex;
+      justify-content: unset;
+      align-items: center;
+
+      > div {
+        max-width: 150px;
+        flex: 1;
+      }
+    }
+  }
+
+  &Search {
+    position: relative;
+
+    input {
+      padding: 25px 50px;
+      width: 100%;
+      font-weight: 400;
+      @include h3;
+
+      @media (max-width: 700px) {
+        padding: 15px 45px;
+      }
+    }
+
+    i {
+      /* eyeglass icon */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      color: $color-gray;
+    }
+  }
+
+  &Name {
+    position: relative;
+
+    &.pointer {
+      cursor: pointer;
+    }
+
+    > div {
+      display: inline-block;
+
+      span {
+        display: block;
+        color: $color-gray;
+
+        @media (min-width: 601px) {
+          display: none;
+        }
+      }
+    }
+  }
+  // selected projects
+  .projectListingSelected.tableRow {
+    background-color: var(--primary-color);
+    .projectListingName {
+      > div {
+        color: white;
+
+        span {
+          color: white;
+        }
+      }
+    }
+    .projectListingType {
+      color: white;
+    }
+
+    .extrasButton {
+      background-color: var(--primary-color);
+      border-color: white;
+
+      &:after {
+        color: white;
+      }
+    }
+
+    &:nth-of-type(odd) {
+      background-color: var(--primary-color);
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  // unique styles
+  .container {
+    @media (max-width: 650px) {
+      padding: 0;
+    }
+  }
+
+  .table {
+    margin-bottom: 140px;
+  }
+
+  .tableHeader {
+    color: $color-gray;
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+
+  .tableRow {
+    // resetting styles that are removed on mobile
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @media (max-width: 699px) {
+      margin: -1px 0px;
+    }
+
+    &:nth-of-type(odd) {
+      background-color: $color-white;
+    }
+
+    &:hover {
+      background-color: $color-off-white;
+    }
+
+    &Item {
+      // resetting styles that are removed on mobile
+      display: flex;
+      flex-flow: row nowrap;
+      flex-grow: 1;
+      flex-basis: 0;
+      padding: 0 10px;
+      align-items: center;
+      cursor: pointer;
+
+      // generate Flexbox grow-rate utility classes
+      @for $i from 1 through 10 {
+        &_#{$i} {
+          flex-grow: $i;
+        }
+      }
+
+      &.projectListingType {
+        @media (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+
+    &Disabled {
+      background-color: $color-white-darker !important;
+      pointer-events: none;
+    }
+  }
+
+  .extras {
+    &Dropdown {
+      width: 140px;
+    }
+    &DropdownMaxWidth {
+      width: 215px;
+    }
+  }
+
+  &Type {
+    color: $color-gray;
+  }
+
+  &LastCol {
+    > div {
+      margin-left: auto;
+    }
+  }
+}
+
+.publicHeader {
+  padding-top: 10px;
+}
+
+.categoryWrapper {
+  margin-left: 10px;
+  max-width: 250px !important;
+  @media (min-width: 750px) {
+    max-width: 250px !important;
+  }
+}

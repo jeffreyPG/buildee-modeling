@@ -1,0 +1,69 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tabs.scss';
+
+.manage {
+  min-height: $minusHeader;
+  text-align: left;
+
+  &Wrap {
+    @media (min-width: 900px) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &Sidebar {
+    padding: 30px;
+
+    @media (min-width: 900px) {
+      width: 25%;
+    }
+  }
+
+  &Image {
+    width: 100%;
+
+    &Icon {
+      background-color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      height: 227px;
+      max-width: 227px;
+    }
+
+    &Photo {
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &Main {
+    @media (min-width: 900px) {
+      width: calc(80% - 50px);
+      margin-left: 50px;
+      margin-bottom: 50px;
+      min-height: 400px;
+    }
+  }
+
+  :global(.active) {
+    background-color: $color-white;
+  }
+
+  .tabs {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .tab {
+    padding-bottom: 5px;
+  }
+}
+
+.header {
+  padding-top: 10px;
+}

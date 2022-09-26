@@ -1,0 +1,42 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px 5px 0;
+  padding: 5px 15px;
+  border-radius: 2px;
+  background-color: $color-white-darker;
+  white-space: nowrap
+
+  small {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.4;
+    color: $color-text;
+  }
+
+  /*
+    only use span element when the
+    inside contents are clickable
+    (ex. deleting the tag, searching by the tag, etc.)
+  */
+  span {
+    cursor: pointer;
+  }
+
+  /* Usually used for the "x" on the right side of the tag*/
+  i {
+    margin-left: 10px;
+  }
+
+  &Editing {
+    border-radius: 30px;
+  }
+}

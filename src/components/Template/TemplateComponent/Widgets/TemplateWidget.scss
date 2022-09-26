@@ -1,0 +1,46 @@
+@import '../../../../styles/main.scss';
+
+.template-widget {
+  position: relative;
+  border-top: 1px solid $color-white-dark;
+  height: 50px;
+  width: 100%;
+  padding: 13px 20px;
+  z-index: 10;
+  color: $color-white-dark;
+  transition: .15s;
+  cursor: move;
+
+  &:nth-child(1) {
+    border-top: none;
+  }
+
+  &:hover {
+    background-color: $color-gray-lightest;
+  }
+
+  i {
+    font-size: 13px;
+    margin-right: 10px;
+    transition: 150ms;
+
+    &:nth-of-type(2) { // move icon on right side
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      margin-right: 15px;
+    }
+  }
+  
+  p {
+    display: inline-block;
+    margin: 0;
+    font-size: 17px;
+    transition: 150ms;
+  }
+
+  &.disabled {
+    opacity: 0.6;
+  }
+}

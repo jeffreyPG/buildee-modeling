@@ -1,0 +1,38 @@
+@import '../../styles/main.scss';
+
+.logo-svg {
+  width: auto; 
+  height: 100%;
+  //max-height: 20px;
+
+  &.twenty {
+    max-height: 20px;
+	  fill: $color-white;
+	}
+	.green {
+	  fill: $color-white;
+	}
+
+  path {
+    fill: $color-white;
+  }
+
+
+  &.home {
+  	max-height: 200px;
+    max-width: 100%;
+
+  	path {
+  		fill: var(--secondary-color);
+  	}
+
+  	.green {
+  		fill: var(--primary-color);
+  	}
+  }
+}
+
+.logo-img {
+	max-height: 38px;
+}
+

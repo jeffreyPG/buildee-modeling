@@ -1,0 +1,15 @@
+{
+  "name": "CFQ22/1 - Compact Fluorescent, quad, (1) 22W lamp",
+  "category": "LIGHTING",
+  "application": "FIXTURE",
+  "technology": null,
+  "type": "Light",
+  "params": {
+      "search": "cfq22/1",
+      "field": "model",
+      "fieldInitialValue": "AAA",
+      "config": "annualHours",
+      "configInitialValue": "8760",
+      "configUpdateValue": "4380"
+  }
+}

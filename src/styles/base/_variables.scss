@@ -1,0 +1,49 @@
+:root {
+    --primary-color: #48A272;
+    --secondary-color: #17253F;
+    --link-color: #54BE85;
+    --header-text-color: #FFFFFF;
+    --primary-text-color: #17253F;
+}
+
+//**** fonts ****//
+
+$font-primary: 'Muli', 'Source Sans Pro', sans-serif;
+
+//**** colors ****//
+
+// $brand-primary: #48A272; /* accents */
+// $brand-secondary: #17253F; /* header */
+
+$color-link: var(--link-color); /* all links */
+
+$color-header-text: var(--header-text-color); /* all links */
+
+
+/* Charts, Avatar backgrounds, icons */
+$color-red: #E05263;
+$color-yellow: #FFB30F;
+$color-blue: #73D2DE;
+$color-green: #54BE85;
+
+$color-off-white: #FBFDFF; /* Tbl row striped */
+$color-white-dark: #F8FBFF; /* Tbl row selected, Dropdown hover */
+$color-white-darker: #E9EDF1; /* Borders, Tbl header, light icons */
+
+$color-gray-lightest: #DADADA; /* Button borders, checkbox borders, alerts */
+$color-gray-light: #C3C6C9; /* Placeholder text */
+$color-gray: #858C92; /* Light text, labels */
+$color-gray-dark: #2C3444; /* text color */
+
+$color-text: $color-gray-dark;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$background: #F9FAFB;
+
+
+/* actions */
+$color-error: $color-red;
+$color-warning: $color-yellow;
+$color-success: var(--primary-color);

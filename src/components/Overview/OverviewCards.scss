@@ -1,0 +1,29 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.benchmarkCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .panel {
+    margin: 10px 0;
+    display: flex;
+
+    @media (min-width: 800px) {
+      width: calc(50% - 10px);
+    }
+    &.benchmarkCard {
+      width: 100%;
+    }
+  }
+
+  .twoThirdBlock {
+    width: calc(100% / 3 * 2 - 10px);
+  }
+
+  .oneThirdBlock {
+    width: calc(100% / 3 * 1 - 10px);
+  }
+}
+

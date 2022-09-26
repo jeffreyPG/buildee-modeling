@@ -1,0 +1,218 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/tags.scss';
+@import '../../styles/components/tables.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/empty.scss';
+
+.buildingList {
+  margin-top: 30px;
+
+  &Search {
+    margin-bottom: 20px;
+
+    @media (max-width: 699px) {
+      margin: 0 10px 20px 10px;
+    }
+
+    &Input {
+      position: relative;
+      width: 100%;
+
+      input {
+        padding: 25px 50px;
+        width: 100%;
+        font-weight: 400;
+        @include h3;
+        
+        @media (max-width: 700px) {
+          padding: 15px 45px;
+        }
+      }
+
+      i { /* eyeglass icon */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 20px;
+        color: $color-gray;
+      }
+
+      > div { /* Loading spinner */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        border-radius: 100%;
+      }
+    }
+
+
+    &Filter {
+      text-align: right;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+        margin: 0;
+        font-style: italic;
+        color: $background;
+      }
+
+      span {
+        margin-left: 10px;
+        padding: 4px 8px;
+        background-color: var(--primary-color);
+        font-size: 16px;
+        line-height: 1;
+        color: $color-white;
+        cursor: pointer;
+      }
+
+      i {
+        padding-left: 10px;
+      }
+    }
+  }
+
+
+  &Content {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 700px) {
+      align-items: flex-start;
+    }
+  }
+
+  &Image {
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 2px;
+    
+    img {
+      max-width: 100%;
+      border-radius: 2px;
+    }
+    
+    span {
+      display: block;
+      padding: 3px 0;
+      text-align: center;
+      background-color: $color-white;
+      
+      i {
+        color: $color-gray-light;
+      }
+
+      @media (min-width: 700px) {
+        border: 1px solid $color-white-darker;
+      }
+    }
+    
+    @media (min-width: 700px) {
+      width: 70px;
+      margin-right: 20px;
+    }
+  }
+
+  &Info {
+    width: calc(100% - 100px);
+  }
+
+  &Name  {
+    span {
+      display: block;
+      color: var(--link-color);
+      
+      &:last-child {
+        color: $color-gray;
+        font-size: 13px;
+      }
+    }
+  }
+
+  &Archives {
+    .tableRow {
+      display: flex;
+      justify-content: space-between;
+
+      &Item {
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  &Archive {
+    span {
+      margin-left: auto;
+    }
+
+    i {
+      cursor: pointer;
+      transition: color 200ms;
+
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+
+
+  /* Unique styling */
+
+  .tableHeader {
+    cursor: pointer;
+  }
+
+  .tableRow {
+    &Item {
+      &:first-child {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tags {
+    padding-bottom: 0;
+
+    @media (min-width: 700px) {
+      margin-top: 10px;
+    }
+  }
+
+  .tag {
+    padding: 0px 10px;
+  }
+
+  .extras {
+    margin-left: 10px;
+    
+    &Dropdown {
+      width: 200px;
+    }
+    
+    @media (min-width: 700px) {
+      margin-left: auto;
+    }
+  }
+}
+
+.empty{
+  margin-top: 100px;
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+    button + button {
+      margin-left: 100px;
+    }
+  }
+}

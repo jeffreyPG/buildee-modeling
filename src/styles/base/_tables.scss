@@ -1,0 +1,76 @@
+/*
+  *
+  * This is default (responsive) table styles with no special styling
+  * For special styling, see the tables file in the component folder
+  *
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (max-width: 600px) {
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      position: relative;
+      border: none;
+      border-bottom: 1px solid #eee; 
+      padding-left: 40%; 
+
+      &:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 10px;
+        left: 10px;
+        width: 30%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+      }
+
+      &:first-child {
+        padding-left: 10px;
+        padding-top: 40px;
+      }
+
+      /*
+      This is an example of how you would label your data,
+      in your component style file, since this is specific to the component
+      */
+      // &:nth-of-type(1):before { content: "Email"; }
+      // &:nth-of-type(2):before { content: "Role"; }
+      // &:nth-of-type(3):before { content: "Status"; }
+
+    }
+  }
+
+}
+
+/* Zebra striping */
+tr:nth-of-type(even) { 
+  background-color: $background; 
+}
+
+th { 
+  background: var(--secondary-color); 
+  color: white; 
+}
+
+td, th { 
+  padding: 10px; 
+}

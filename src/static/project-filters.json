@@ -1,0 +1,143 @@
+{
+	"Agriculture": {},
+	"Air Distribution": {
+		"CAV": ["CAV Terminal Box"],
+		"Dedicated Outdoor Air System (DOAS)": [],
+		"Energy Recovery": ["Energy Recovery Ventilator"],
+		"Exhaust Fan": [],
+		"Register": ["Automatically Controlled Register", "Manually Controlled Register", "Uncontrolled Register"],
+		"VAV": ["VAV Fan Powered", "VAV Modulating Diffusers", "VAV Non Fan Powered"]
+	},
+	"Controls": {
+		"Building Automation System": [],
+		"Cooling Controls": [],
+		"Heating Controls": [],
+		"HVAC Controls": ["Thermostat", "Control Panel", "Pressure Controller"],
+		"Variable Frequency Drive": []
+	},
+	"Cooling": {
+		"Air Conditioner": ["Computer Room Air Conditioner (CRAC)", "Evaporative Cooler", "Packaged Terminal Air Conditioner (PTAC)", "Packaged/Unitary DX Air Conditioner", "Single Package Vertical Air Conditioner", "Split DX Air Conditioner", "Water Cooled Condensing Unit"],
+		"Chilled Water Pump": [],
+		"Chiller": ["Absorption Chiller", "Air-Cooled Chiller", "Chilled Water Expansion Tank", "Chiller Control Field Panel", "Glycol Pump", "Glycol Tank", "Water-Cooled Chiller"],
+		"Compressor": [],
+		"Condenser": ["Air-Cooled Condenser", "Water-Cooled Condenser"],
+		"Condenser Water Pump": [],
+		"Cooling Tower": ["Cooling Tower Controller", "Cooling Tower Makeup Pump", "Dry Cooling Tower", "Fluid Cooling Tower", "Wet Cooling Tower"],
+		"Evaporative Cooler": ["Direct indirect"],
+		"Evaporator": ["Evaporator"],
+		"PCM Plate": ["PCM Plate"],
+		"Refrigerant Monitor": []
+	},
+	"Custom": {},
+	"Distributed Generation": {
+		"Electric Generator": [],
+		"Engine": [],
+		"Photovoltaics": ["Battery", "Combiner Box", "Disconnect", "Inverter", "Monitoring System", "Panel"],
+		"Standby Generator": ["Day Tank", "Diesel Tank"]
+	},
+	"Energy Distribution": {
+		"Automatic Transfer Switch": [],
+		"Battery": [],
+		"Battery Charger": [],
+		"Emergency Transfer Switches": [],
+		"Metering": ["Chilled Water Meter", "Cooling Tower Water Meter", "Electric Meter", "Heating Hot Water Meter", "Natural Gas Meter", "Steam Meter", "Water Meter"],
+		"Natural Gas Booster Pump": [],
+		"Transformer": [],
+		"Uninterruptible Power Supply": []
+	},
+	"Envelope": {
+		"Door": [],
+		"Roof": ["Insulation"],
+		"Wall": ["Insulation"],
+		"Window": []
+	},
+	"Heating": {
+		"Boiler": ["Boiler Control Field Panel", "Boiler Controller", "Boiler Feedwater Pump", "Feedwater Tank", "Fue Oil Pump", "Fuel Oil Tank", "Hot Water Boiler", "Steam Boiler"],
+		"Convection": ["Electric Baseboard"],
+		"District Steam Station": [],
+		"Furnace": [],
+		"Hot Water Pump": [],
+		"Radiant": ["Infrared Heater", "Radiator"],
+		"Steam Valve": [],
+		"Unit Heater": ["Electric Unit Heater", "Unit Heater"]
+	},
+	"Heating & Cooling": {
+		"Air Handling Unit": [],
+		"Air Separator": [],
+		"Fan Coil Unit": ["Fan Coil 2 Pipe", "Fan Coil 4 Pipe", "Mini-Split Heat Pump"],
+		"Ground Source Heat Pump": [],
+		"Heat Exchanger": [],
+		"Heat Pump": ["Packaged Terminal Heat Pump (PTHP)", "Packaged/Unitary Heat Pump", "Single Package Vertical Heat Pump", "Split Heat Pump"],
+		"HVAC Controls": [],
+		"Variable Refrigerant Flow(VRF)": ["VRF Terminal Units", "VRF Indoor Unit", "VRF Outdoor Unit"],
+		"Water Source Heat Pump": []
+	},
+	"Kitchen": {
+		"Cooking": ["Convection Oven", "Hot Top Range", "Microwave Oven", "Open Burner Range", "Range Oven"],
+		"Dishwasher": [],
+		"Ice Machine": []
+	},
+	"Laundry": {
+		"Clothes Dryer": [],
+		"Clothes Washer": [],
+		"Combination Clothes Washer / Dryer": []
+	},
+	"LEED": {},
+	"Lighting": {
+		"Lamp": ["CFL", "Circline Fluorescent", "Halogen", "High Intensity Discharge", "Incandescent", "LED", "Linear Fluorescent", "U-Shape Fluorescent"],
+		"Light Fixture": ["Area/Roadway", "Bollard", "Canopy", "Cove", "Decorative", "Desk/Task", "Directional", "Display Case", "Downlight", "Exit Sign", "High Bay/Low Bay", "High Intensity Discharge", "Industrial", "Parking Garage", "Troffer/Grid Ceiling", "Wall Pack", "Wallwash"],
+		"Lighting Controls": [],
+		"Retrofit Kit": ["Area/Roadway", "Bollard", "Downlight", "Industrial", "Linear", "Troffer/Grid Ceiling"]
+	},
+	"LL87": {},
+	"Plug Load": {
+		"Kitchen": ["Refrigerator"],
+		"Vending": []
+	},
+	"Pool": {},
+	"Process": {
+		"Compressed Air": ["Air Dryer", "Compressed Air Tank"],
+		"Conveyance": ["Elevator"],
+		"Furnace": [],
+		"Hand Dryer": [],
+		"Machinery": [],
+		"Pool": [],
+		"Process Boiler": [],
+		"Process Controls": [],
+		"Process Fan": [],
+		"Process Furnace": [],
+		"Process Load": [],
+		"Process Motor": [],
+		"Process Pump": [],
+		"Process Tank": [],
+		"Tool": []
+	},
+	"Refrigeration": {
+		"Cold Storage": ["Chilled Section", "Freezer Section"],
+		"Reach - in Cooler": [],
+		"Reach - in Freezer": [],
+		"Refrigeration Controls": [],
+		"Walk - in Cooler": [],
+		"Walk - in Freezer": []
+	},
+	"Storage": {
+		"Thermal Medium": ["Expansion Tank", "Tank", "Tank Management System"]
+	},
+	"Ventilation": {
+		"Air Ventilator": [],
+		"Mechanical": [],
+		"Spot Exhaust": ["Toilet Exhaust Fan", "Kitchen Hood"],
+		"Ventilation Controls": ["DCV"]
+	},
+	"Water Heating": {
+		"Heat Exchanger": [],
+		"Heat Pump": [],
+		"Instantaneous": [],
+		"Storage Tank": []
+	},
+	"Water Use": {
+		"HVAC Water Use": ["Piping", "Chemical Pump", "Chemical Tank", "Condensate Pump", "Condensate Tank", "Domestic Water Expansion Tank", "Domestic Water Pump", "Pump Controller", "Sewage Ejector Pump", "Sump Pump", "Tempering Tank", "Water Detection System", "Water Tank", "Water Treatment Pump", "Water Treatment Tank"],
+		"Irrigation": [],
+		"Plumbing": ["Backflow Prevention Device", "Shower", "Sink", "Temperature Mixing Valves", "Toilet (Flushometer)", "Toilet (Tank)", "Urinal", "Valve"]
+	}
+}

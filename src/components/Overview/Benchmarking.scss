@@ -1,0 +1,25 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.benchmarking {
+  width: 100%;
+  .panelContent {
+    display: flex;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: auto;
+    .panel {
+      margin: 10px;
+      border: none;
+    }
+    .annualCost {
+      min-width: 300px;
+    }
+    .endUse {
+      min-width: 400px;
+    }
+    .overviewSummary {
+      min-width: 300px;
+    }
+  }
+}

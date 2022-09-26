@@ -1,0 +1,253 @@
+@import '../../../styles/main.scss';
+
+.personalizeContainer {
+  background-color: #fff;
+  box-shadow: 0 0px 8px 0 $color-gray;
+  width: 400px;
+  &Header {
+    font-size: 20px;
+    min-height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-black;
+    font-weight: bold;
+  }
+  &Footer {
+    padding: 0px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    > button {
+      width: 30%;
+      margin-left: 10px;
+    }
+  }
+}
+
+.square{
+  &::after {
+    position:absolute;
+    top:-12px; 
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid rgba(0,0,0, 0.03);
+  }
+  &::before {
+    position:absolute;
+    top:-10px; 
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+  }
+}
+
+.squareLeft{
+  @extend .square;
+}
+
+.squareCenter{
+  @extend .square;
+  &::after {
+    left: calc(50% - 12px);
+  }
+  &::before {
+    left: calc(50% - 12px);
+  }
+}
+
+.squareRight{
+  @extend .square;
+  &::after {
+    right: 0;
+  }
+  &::before {
+    right: 0;
+  }
+}
+
+.roleSelectContainer {
+  padding-top: 10px;
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.typeSelectContainer {
+  padding: 10px 20px 10px 20px;
+  span {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.searchFilter {
+  margin: 20px 0px 20px 0px;
+  position: relative;
+
+  input {
+    padding: 12px 26px 12px 12px;
+    width: 100%;
+    font-weight: 400;
+    border: 1px solid $color-white-darker;
+    border-radius: 2px;
+    &:focus {
+      outline: none;
+      border: 1px solid var(--primary-color);
+      border-radius: 2px;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 9px;
+    color: $color-gray;
+  }
+}
+
+.splitter {
+  border-top: 2px solid #E6E8EC;
+}
+
+.fieldContainer {
+  padding: 10px 0px;
+  max-height: 400px;
+  overflow-y: auto;
+  &Label {
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+  &DisabledLabel {
+    color: $color-gray;
+  }
+}
+
+.noField {
+  padding: 10px 20px;
+}
+
+.stepTwo {
+  padding: 10px 20px;
+  &Back {
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: $color-gray;
+    cursor: pointer;
+  
+    i {
+      margin-right: 5px;
+      animation-duration: 1000ms;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: 1;
+      transition: 300ms;
+    }
+  
+    &:hover {
+      color: var(--primary-color);
+      i {
+        animation-name: bounce;
+      }
+    }
+  }
+  &Title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &Body {
+    margin-bottom: 20px;
+    &Info {
+      margin-bottom: 10px;
+    }
+  }
+
+  &Buttons {
+    display: flex;
+    > button {
+      width: 40% !important;
+    }
+    button + button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.clearIcon {
+  cursor: pointer;
+  &:hover {
+    color: var(--primary-color)
+  }
+}
+
+.yearOption {
+  margin-bottom: 20px;
+
+  label {
+    cursor: pointer;
+  }
+
+  span {
+    position: relative;
+    padding-left: 30px;
+    margin-right: 30px;
+
+    &:before {
+      content: "\e86c";
+      position: absolute;
+      z-index: 20;
+      left: 7px;
+      top: 7px;
+      font-size: 7px;
+      font-family: 'Material Icons';
+      font-weight: 900;
+      display: none;
+      color: white;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background: lightgray;
+      border-radius: 50%;
+    }
+  }
+
+  label {
+    display: unset !important;
+  }
+
+  input {
+    display: none !important;
+    margin-top: 0;
+
+    &:checked + span:after {
+      background-color: var(--primary-color);
+    }
+    &:checked + span:before {
+      display: inline-block;
+    }
+  }
+}
+
+.yearRange{
+  margin-bottom: 20px;
+}

@@ -1,0 +1,43 @@
+@import '../../../styles/main.scss';
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .button {
+    width: 49%;
+  }
+}
+
+.contactContainer {
+  margin-top: 10px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-lightest;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 10px 0px 20px 40px;
+  > div {
+    margin-right: 30px;
+  }
+}
+.roleContainer {
+  max-width: 213px;
+  min-width: 213px;
+}
+
+.buttonContainer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  .skipButton {
+    width: 20%;
+    margin-right: 40px;
+  }
+}
+.buildingUseType {
+  width: 100%;
+  max-width: unset !important;
+  margin-bottom: 40px !important;
+}

@@ -1,0 +1,17 @@
+@import '../../../../styles/main.scss';
+@import '../../../../styles/components/tables.scss';
+
+.modal {
+  .modalInner {
+    min-width: 300px;
+  }
+  .modalHeading {
+    align-items: unset;
+  }
+  .modalBody {
+    position: relative;
+  }
+}
+.bodyText {
+  padding-right: 20px;
+}

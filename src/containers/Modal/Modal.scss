@@ -1,0 +1,68 @@
+@import '../../styles/main.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  
+  // transitions
+  &.fade-in {
+    background-color: transparent;
+
+    .modalOuter {
+      top: -100vh;
+    }
+  }
+  &.fade-in.visible {
+    transition: background-color 300ms ease;
+    background-color: rgba(var(--secondary-color), 0.6);
+
+    .modalOuter {
+      transition: top 200ms ease;
+      top: 40px;
+      position: relative;
+    }
+  }
+
+  &Outer {
+    position: absolute;
+    top: 40px;
+    width: 90%;
+    max-height: calc(100% - 90px);
+    overflow: hidden;
+    box-shadow: 0 0 110px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+  }
+  
+  &Inner {
+    width: calc(100% + 20px);
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+
+  &OuterSmall {
+    max-width: 600px;
+  }
+  
+  &OuterMiddle {
+    max-width: 900px;
+  }
+  
+
+  &Close {
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

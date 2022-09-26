@@ -1,0 +1,144 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.benchmarkAnnualUsage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  .green {
+    color: $color-green;
+    fill: $color-green;
+  }
+
+  .red {
+    color: $color-error;
+    fill: $color-error;
+  }
+
+  .white {
+    color: $color-white-darker;
+    fill: $color-white-darker;
+  }
+
+  .gray {
+    color: $color-gray;
+    fill: $color-gray;
+  }
+
+  &SubHeading {
+    padding: 20px 0 0;
+  }
+
+  &Icon {
+    text-align: center;
+
+    span {
+      position: relative;
+      z-index: 0;
+      display: inline-block;
+      height: 45px;
+      width: 45px;
+      margin: auto;
+      border-radius: 50%;
+      background-color: $color-yellow;
+    }
+
+    i {
+      position: absolute;
+      z-index: 20;
+      top: 10px;
+      left: 50%;
+      display: block;
+      font-size: 25px;
+      transform: translateX(-50%);
+      color: $color-white;
+    }
+  }
+
+  &Details {
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 30px;
+
+    span {
+      i {
+        font-size: 30px;
+      }
+    }
+    
+    h1 {
+      padding: 0 10px;
+      margin: 0;
+    }
+    
+    h3 {
+      margin: 0;
+      color: $color-gray;
+    }
+  }
+
+  &Bars {
+    text-align: left;
+    padding-top: 30px;
+  }
+
+  &Label {
+    padding-right: 20px;
+    width: 100%;
+    font-size: 16px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &SVG {
+    display: flex;
+    width: 100%;
+
+    div {
+      padding-left: 5px;
+      position: relative;
+      top: -2px;
+    }
+
+    p {
+      margin: 0;
+      white-space: nowrap;
+
+      &:first-child {
+        font-size: 14px;
+      }
+      &:last-child {
+        fill: $color-gray;
+          font-size: 12px;
+      }
+    }
+  }
+
+  &EmptyText {
+    color: $color-white-darker;
+    background-color: $color-white-darker;
+  }
+
+  :global(.arrow_upward){
+    color: $color-error;
+  }
+
+  :global(.arrow_downward){
+    color: var(--primary-color);
+  }
+
+  .sourceLink {
+    margin: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+    a {
+      color: var(--primary-color);
+    }
+  }
+}

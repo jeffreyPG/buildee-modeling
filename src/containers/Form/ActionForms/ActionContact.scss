@@ -1,0 +1,42 @@
+@import '../../../styles/main.scss';
+
+.actionContact {
+  position: relative;
+  width: 100%;
+
+  &Button{
+    width: auto;
+  }
+
+  &Delete{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+
+  &Header{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &Name{
+    margin-bottom: 10px;
+    width: 33%;
+  }
+
+  &Row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 -5px;
+
+    &Field{
+      padding: 10px 5px;
+      min-width: 50%;
+      flex-grow: 1;
+    }
+  }
+}

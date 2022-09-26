@@ -1,0 +1,86 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tables.scss';
+
+.utilityWidget {
+  margin: 10px 0;
+
+  &Button {
+    width: auto;
+    margin: 30px auto;
+  }
+
+	&Heading {
+		text-align: left;
+    background-color: $color-gray-lightest;
+    padding: 20px 58px;
+
+		h3 {
+      display: inline-block;
+			text-transform: capitalize;
+      margin: 0;
+    }
+    
+    p {
+      display: inline-block;
+      margin-left: 20px;
+
+      span {
+        display: inline-block;
+        margin-right: 10px;
+        white-space: nowrap;
+      }
+    }
+	}
+
+  &Data {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+
+  &Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--link-color);
+    cursor: pointer;
+
+    i {
+      color: $color-gray;
+    }
+
+    @media (min-width: 700px) {
+      align-items: flex-start;
+    }
+  }
+
+  &Delete {
+    
+    i {
+      cursor: pointer;
+
+      @media (min-width: 700px) {
+        margin-left: auto;
+      }
+    }
+    
+    @media (min-width: 700px) {
+      max-width: 40px;
+    }
+  }
+
+  &ChartToggle {
+    width: 100%;
+    border-top: 1px solid $color-white-darker;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    cursor: pointer;
+
+    small {
+      display: block;
+      padding: 15px 0;
+    }
+  }
+}

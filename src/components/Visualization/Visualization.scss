@@ -1,0 +1,71 @@
+@import '../../styles/main.scss';
+
+.visualization {
+  &Wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+  }
+
+  &SVG {
+    width: calc(100% - 120px);
+    padding-right: 10px;
+  }
+
+  &Percentage {
+    width: 100px;
+    padding-left: 10px;
+    font-size: 14px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &Heading {
+    text-align: left;
+
+    span, p {
+      margin-bottom: 0;
+    }
+  }
+
+
+  &Loading {
+    position: relative;
+    width: 100%;
+    background: $color-white-darker;
+    font-size: 0;
+  }
+
+  &HeatMap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    font-size: 0;
+    background: var(--link-color);
+    background: linear-gradient(to right, $color-red 0%, $color-yellow 50%, var(--link-color) 100%);
+  }
+
+  &Labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .show {
+    opacity: 1;
+  }
+}
+
+.line {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-width: 1.5px;
+}
+
+.bar {
+  fill: $color-gray;
+}
+
+

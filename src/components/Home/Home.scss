@@ -1,0 +1,98 @@
+@import '../../styles/main.scss';
+
+.home {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Logo {
+    margin-bottom: 30px;
+
+    img {
+      width: 80%;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  &CTAs {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+
+    @media (max-width: 400px) {
+      flex-wrap: wrap;
+    }
+
+    :local(a) {
+      display: inline-block;
+    }
+
+    .button {
+      margin: 1%;
+      justify-self: center;
+      @media (max-width: 400px) {
+        width: 100%;
+        margin: 1% 0;
+      }
+    }
+  }
+}
+
+.homeCarousel {
+  position: relative;
+  margin: 70px 0;
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 200ms;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  :global(.arrow-left) {
+    left: 0;
+  }
+
+  :global(.arrow-right) {
+    right: 0;
+  }
+
+  .slides {
+    padding: 0 40px;
+    opacity: 1;
+    transition: opacity 200ms;
+  }
+
+  .inVisible {
+    opacity: 0;
+  }
+}
+
+.error {
+  margin-top: 10px;
+  text-align: center;
+  color: $color-red;
+  font-size: 20px;
+}
+
+.loadingContainer{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  span {
+      margin: 10px;
+  }
+}

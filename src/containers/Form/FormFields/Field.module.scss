@@ -1,0 +1,89 @@
+@import '../../../styles/base/_variables.scss';
+
+.field {
+  position: relative;
+  display: flex;
+}
+
+.adornment {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0.5em;
+  margin: 1px;
+  background-color: $color-off-white;
+  border-left: 1px solid $color-white-darker;
+}
+
+.selectAdornment {
+  display: flex;
+  align-items: center;
+  padding: 0.5em;
+  background-color: $color-off-white;
+  border: 1px solid $color-white-darker;
+}
+
+.selectIcons {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.selectArrow {
+  align-self: center;
+  margin-right: 0.3em;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  color: $color-gray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+
+  input, textarea {
+    font-weight: 400;
+  }
+
+  textarea {
+    min-height: 60px;
+    max-width: 100%;
+
+    @media (min-width: 650px) {
+      min-height: 200px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.customTextArea {
+  min-height: 60px !important;
+  max-width: 100%;
+}
+
+.input {
+  border: 1px solid $color-white-darker;
+  background: $color-white;
+  border-radius: 2px;
+}
+
+.disabled {
+  background-color: #f3f4f4;
+  border: 1px solid #e8edf1;
+}

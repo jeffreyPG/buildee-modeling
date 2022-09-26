@@ -1,0 +1,353 @@
+@import '../../styles/main.scss';
+
+.headerNav {
+  background-color: var(--secondary-color);
+  position: relative;
+  z-index: 12;
+  border-bottom: 1px solid rgba(0,0,0, 0.1);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &Logo {
+    margin-right: 25px;
+    cursor: pointer;
+
+    @media (min-width: 799px) {
+      margin-right: 40px;
+    }
+  }
+
+  &Main {
+    display: flex;
+    align-items: center;
+  }
+
+  &Desktop {
+    display: flex;
+    align-items: center;
+
+    .menus {
+      position: relative;
+      padding: 15px 10px;
+      text-decoration: none;
+      cursor: pointer;
+
+      a {
+        color: var(--header-text-color);
+      }
+
+      .appsIcon {
+        @media (max-width: 799px) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .orgs {
+      margin-right: 20px;
+    }
+
+    .accountName {
+      display: none;
+      @media (min-width: 800px) {
+        display: inline-block;
+      }
+    }
+
+    .avatar {
+      display: inline-block;
+
+      &Circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--link-color);
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+
+        span {
+          font-size: 80%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        display: none;
+      }
+    }
+
+    .link {
+      @media (min-width: 800px) {
+        position: relative;
+        margin-right: 18px;
+        padding: 20px 0;
+        color: var(--header-text-color);
+        cursor: pointer;
+        margin-bottom: -1px;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+        }
+
+        &.active {
+          &:after {
+            background-color: var(--header-text-color);
+          }
+        }
+      }
+    }
+
+    &Show {
+      @media (max-width: 799px) {
+        display: none;
+      }
+      > .link {
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &Mobile {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-105%);
+    transition: background-color 300ms;
+
+    &.active {
+      transform: translateX(0%);
+      background-color: rgba($color-white, 0.7);
+    }
+
+    &Inner {
+      transform: translateX(-125%);
+      background-color: $color-white;
+      transition: transform 300ms 300ms;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 30%;
+      bottom: 0;
+      padding: 50px 30px;
+
+      &.active {
+        transform: translateX(0%);
+      }
+    }
+
+    &Click {
+      display: none;
+      width: 25px;
+      height: 30px;
+      margin-right: 15px;
+      cursor: pointer;
+
+      span {
+        position: relative;
+        top: 12px;
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--header-text-color);
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          height: 3px;
+          width: 100%;
+          background-color: var(--header-text-color);
+        }
+
+        &:before {
+          top: 6px;
+        }
+
+        &:after {
+          bottom: 6px;
+        }
+      }
+
+      @media (max-width: 799px) {
+        display: inline-block;
+      }
+    }
+
+    .logo {
+      max-width: 160px;
+      cursor: pointer;
+    }
+
+    .links {
+      margin-top: 20px;
+    }
+
+    .link {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      transition: color 300ms;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+
+    i {
+      color: $color-gray;
+    }
+  }
+}
+
+.userDropdown,
+.appDropdown,
+.organziationDropdown {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% - 4px);
+  right: 0;
+  min-width: 180px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color: $color-black;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+
+.appDropdown {
+  min-width: 220px;
+}
+
+.mobileOrganziationDropdown {
+  li {
+    padding: 15px 0;
+    transition: color 200ms;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+
+  span {
+    display: block;
+    padding: 15px 0 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+}
+.link-active {
+  color: var(--link-color);
+}
+.helpContainer {
+  color: var(--header-text-color);
+}
+.organizationScroll {
+  max-height: 600px;
+  overflow-y: auto;
+}
+.currentOrg {
+  display: flex;
+  justify-content: space-between;
+  &Disabled {
+    color: $color-gray !important;
+    &:hover {
+      color: $color-gray !important;
+      i {
+        color: $color-gray !important;
+      }
+    }
+  }
+}

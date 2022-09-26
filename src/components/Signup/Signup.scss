@@ -1,0 +1,20 @@
+@import '../../styles/main.scss';
+
+.signup {
+  text-align: center;
+  min-height: $minusHeader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &CTAs {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  &Link {
+    font-size: 14px;
+    color: var(--secondary-color);
+  }
+}
+

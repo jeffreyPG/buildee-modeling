@@ -1,0 +1,207 @@
+@import '../../styles/main.scss';
+
+.SubHeaderNav {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-white-darker;
+  position: relative;
+  z-index: 1;
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  &Logo {
+    margin-right: 20px;
+    padding: 15px 0;
+    cursor: pointer;
+    
+    @media (min-width: 799px) {
+      margin-right: 40px;
+    }
+  }
+
+  &Main {
+    display: flex;
+    align-items: center;
+  }
+
+  &Desktop {
+    display: flex;
+    align-items: center;
+  
+    .menus {
+      position: relative;
+      padding: 15px 10px;
+      text-decoration: none;
+      cursor: pointer;
+
+      a {
+        color: $color-white;
+      }
+
+      .appsIcon {
+        @media (max-width: 799px) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    .orgs {
+      margin-right: 20px;
+    }
+
+    .accountName {
+      display: none;
+      @media (min-width: 800px) {
+        display: inline-block;
+      }
+    }
+
+    .avatar {
+      display: inline-block;
+      
+      &Circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--link-color);
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        padding: 5px;
+
+        span {
+          font-size: 80%;
+        }
+      }
+
+      @media (min-width: 800px) {
+        display: none;
+      }
+    }
+
+    .link {
+      @media (min-width: 800px) {
+        position: relative;   
+        margin-right: 20px;
+        padding: 20px 0;
+        cursor: pointer; 
+  
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;    
+          right: 0;    
+          height: 4px;
+        }
+        
+        &.active {
+          &:after {
+            background-color: var(--primary-color);
+          }
+        }
+      }
+    }
+
+    .manage {
+      margin-right: 40px;
+    }
+
+    &Show {
+      @media (max-width: 799px) {
+        display: none;
+      }
+    }
+
+    .settings {
+      margin-left: 40px;
+    }
+  }
+}
+.organziationDropdown {
+  position: absolute;
+  z-index: 1;
+  top: calc(100% - 4px);
+  right: 0;
+  min-width: 180px;
+  border-radius: 2px;
+  background-color: $color-white;
+  box-shadow: 0px 1px 8px 0px $color-gray;
+  color:$color-black;
+
+  &.wide {
+    left: 0;
+    right: auto;
+    min-width: 300px;
+  }
+
+  span {
+    display: block;
+    padding: 15px 20px 0;
+    font-size: 12px;
+    color: $color-gray-light;
+    text-transform: uppercase;
+    border-top: 1px solid $color-gray-light;
+
+    &:first-of-type {
+      border-top: none;
+    }
+
+    &.empty {
+      padding-top: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: color 200ms;
+    cursor: pointer;
+
+    div {
+      display: flex;
+      width: 100%;
+    }
+
+    i {
+      margin-right: 10px;
+      color: $color-gray-lightest;
+      transition: color 200ms;
+
+      &:nth-of-type(2) {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+    
+    &:hover {
+      color: var(--link-color);
+
+      i {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  li:hover {
+    color: var(--primary-color);
+    
+    i {
+      color: var(--primary-color);
+    }
+  }
+
+  .loader {
+    padding: 15px 20px;
+  }
+}
+.link-active{
+  color: var(--link-color)
+}

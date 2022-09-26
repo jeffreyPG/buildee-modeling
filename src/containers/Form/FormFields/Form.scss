@@ -1,0 +1,198 @@
+@import '../../../styles/main.scss';
+
+.formWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  @extend .container;
+  padding-bottom: 100px;
+
+
+  &Header{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    padding: 0 15px;
+
+    &Container{
+      background: #fff;
+      width: 100%;
+    }
+
+    &Title{
+      padding-right: 2em;
+      flex-grow: 1;
+    }
+
+    &Content{
+      flex-grow: 1;
+    }
+  }
+
+  &Section {
+    @media (min-device-width : 1024px)  {
+      margin: 30px 0;
+    }
+
+    &Description {
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $color-gray;
+      }
+
+      @media (min-width: 800px) {
+        width: 25%;
+      }
+    }
+
+    &Inputs {
+      border-radius: 2px;
+
+      @media (min-width: 800px) {
+        width: 70%;
+        padding: 40px;
+      }
+
+      @media (min-width: 650px) {
+        padding: 20px;
+        border: 1px solid $color-white-darker;
+        background-color: $color-white;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  &Input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input, textarea {
+      font-weight: 400;
+    }
+
+    textarea {
+      min-height: 60px;
+      max-width: 100%;
+
+      @media (min-width: 650px) {
+        min-height: 200px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Field {
+      border: 1px solid $color-white-darker;
+      background: $color-white;
+    }
+
+    &Row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &Row + &Row {
+      margin-top: 1.2em;
+    }
+
+    &Clear {
+      cursor: pointer;
+      position: absolute;
+      top: calc(50% + 6px);
+      right: 10px;
+    }
+
+  }
+
+  &Source {
+
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+
+  &Close {
+    cursor: pointer;
+  }
+
+  &Footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    border: 1px solid $color-white-darker;
+    box-shadow: 0 5px 18px -1px rgba($color-gray, 0.7);
+    padding: 0 1em;
+    @media (min-device-width : 1024px)  {
+      padding: 10px 0;
+    }
+
+    &Buttons {
+      margin-left: auto;
+    }
+
+    button {
+      display: inline-block;
+      width: auto;
+      margin-left: 10px;
+    }
+
+    &Container {
+      @extend .container;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+}
+
+.formSelect {
+  position: relative;
+}
+
+.formSelect:after {
+  content: "";
+  position: absolute;
+  top: 71%;
+  right: 15px;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #2c3444;
+}

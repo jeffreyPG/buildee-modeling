@@ -1,0 +1,65 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.filterContainer {
+  position: absolute;
+  z-index: 20;
+  background-color: #fff;
+  box-shadow: 0 1px 8px 0 #858c92;
+  width: 400px;
+  height: 500px;
+  overflow-y: auto;
+  top: calc(100% - 30px);
+  &Header {
+    background-color: var(--primary-color);
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  &Body {
+    padding: 10px;
+    background-color: #fff;
+    color: #2C3444;
+    font-size: 16px;
+    height: 500px;
+    overflow-y: auto;
+  }
+}
+.deleteIcon {
+  cursor: pointer;
+}
+.filterMenu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+  &Sub {
+    padding: 0px 20px;
+    display: grid;
+    &Item {
+      padding-bottom: 20px;
+      cursor: pointer;
+      width: 300px;
+      display: flex;
+      word-break: break-word;
+    }
+    &Menu {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0px;
+      cursor: pointer;
+      &Item {
+        padding-bottom: 20px;
+        cursor: pointer;
+        width: 300px;
+        display: flex;
+        word-break: break-word;
+        padding-left: 10px;
+      }
+    }
+  }
+}

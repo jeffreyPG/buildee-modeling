@@ -1,0 +1,18 @@
+@import '../../../styles/main.scss';
+
+.empty{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &Body {
+    text-align: center;
+    &Title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    &Description{
+      color: $color-gray;
+    }
+  }
+}

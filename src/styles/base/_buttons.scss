@@ -1,0 +1,81 @@
+button,
+.button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px 25px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: $color-white;
+  text-decoration: none;
+  box-shadow: none;
+  border: 0;
+  transition: background-color 200ms ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &Primary {
+    background-color: var(--primary-color);
+    &:hover {
+      background-color: var(--primary-color);
+      opacity: 0.8;
+    }
+
+    &.buttonDisable {
+      background-color: var(--primary-color);
+      opacity: 0.8;
+    }
+  }
+
+  &Secondary {
+    color: $color-text;
+    background-color: $color-white;
+    box-shadow: inset 0px 0px 0px 2px $color-gray-lightest;
+    transition: color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    &:hover {
+      color: var(--link-color);
+      box-shadow: inset 0px 0px 0px 2px var(--link-color);
+    }
+
+    &.buttonDisable {
+      color: lighten($color-text, 30%);
+      background-color: $color-white;
+      box-shadow: inset 0px 0px 0px 2px lighten($color-gray-lightest, 10%);
+    }
+  }
+
+  &Error,
+  &Delete {
+    background-color: $color-error;
+    &:hover {
+      background-color: lighten($color-error, 20%);
+    }
+
+    &.buttonDisable {
+      background-color: lighten($color-error, 20%);
+    }
+  }
+
+  &Disable {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  &Dropdown {
+    width: auto;
+    label {
+      display: none;
+    }
+
+    select {
+      @extend .button;
+      @extend .buttonPrimary;
+      text-align-last: center;
+    }
+  }
+}

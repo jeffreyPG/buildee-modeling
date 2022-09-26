@@ -1,0 +1,169 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.projectRate {
+  &Form {
+    label {
+      display: block;
+      color: $color-gray;
+    }
+  }
+
+  &Body {
+    @media (min-width: 700px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Financial {
+      padding: 10px 20px;
+    }
+
+    &Blended {
+      padding: 10px 20px;
+
+      @media (max-width: 700px) {
+        margin-top: 10px;
+      }
+
+      .scenarioContainer {
+        display: block !important;
+        .section {
+          &:last-of-type {
+            margin-left: 0px !important;
+          }
+        }
+      }
+
+      &Container {
+        @media (min-width: 1000px) {
+          display: flex;
+        }
+
+        .section {
+          &Field {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+
+            label {
+              width: 70%;
+              display: flex;
+              align-items: center;
+              i {
+                color: $color-text;
+              }
+              svg {
+                height: 19px;
+                width: 19px;
+
+                g {
+                  transform: scale(0.5);
+                }
+              }
+            }
+
+            .input {
+              display: flex;
+              align-items: center;
+            }
+
+            @media (min-width: 700px) {
+              padding: 10px 0;
+              border-bottom: 1px solid $color-white-darker;
+
+              &:last-of-type {
+                border-bottom: none;
+              }
+            }
+
+            @media (min-width: 1000px) {
+              margin: 0;
+              border-bottom: 1px solid $color-white-darker;
+              width: 280px;
+
+              .input {
+                width: 200px;
+              }
+            }
+          }
+          @media (min-width: 1000px) {
+            &:last-of-type {
+              margin-left: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: $color-text;
+    }
+  }
+
+  &Field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: $color-text;
+
+    label {
+      width: 100%;
+      color: $color-text;
+    }
+    span {
+      color: $color-text;
+    }
+
+    @media (min-width: 700px) {
+      padding: 10px 0;
+      border-bottom: 1px solid $color-white-darker;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    @media (min-width: 1000px) {
+      margin: 0;
+      border-bottom: 1px solid $color-white-darker;
+
+      input {
+        width: 100px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+        border: none;
+      }
+    }
+
+    input + span {
+      margin-right: 10px;
+    }
+  }
+
+  &Error {
+    width: 100%;
+    padding: 5px;
+    color: $color-white;
+    background-color: $color-error;
+  }
+
+  button {
+    margin: 0 0 0 10px;
+  }
+}
+
+.sourceLink {
+  margin-top: 10px;
+  color: $color-gray;
+  font-size: 14px;
+  a {
+    color: var(--primary-color);
+  }
+}

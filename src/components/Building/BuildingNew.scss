@@ -1,0 +1,48 @@
+@import '../../styles/main.scss';
+
+.buildingNew {
+  text-align: center;
+  min-height: $minusHeader;
+  display: flex;
+  align-items: center;
+
+  span {
+    background-color: $color-error;
+    width: 100%;
+    display: block;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  label {
+    padding: 20px 0 5px;
+    display: block;
+  }
+
+  .buttons {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+      width: 49%;
+    }
+
+    :global( .disabled ){
+      cursor: default;
+      background-color: $color-gray;
+    }
+  }
+
+
+  &Title {
+    padding-bottom: 40px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+}
+

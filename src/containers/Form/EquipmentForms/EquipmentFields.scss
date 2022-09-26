@@ -1,0 +1,12 @@
+.container {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 1.2em;
+  grid-row-gap: 20px;
+}
+
+.disabledSelect {
+  background-color: #f3f4f4;
+  border: 1px solid #e8edf1;
+}

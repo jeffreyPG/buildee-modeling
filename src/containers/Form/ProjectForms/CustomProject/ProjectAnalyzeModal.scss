@@ -1,0 +1,27 @@
+@import '../../../../styles/main.scss';
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color-white, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Inner {
+    margin: 20px;
+    box-shadow: 0 0 10px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+    text-align: center;
+  }
+
+  &Body {
+    padding: 40px;
+    max-width: 600px;
+  }
+}

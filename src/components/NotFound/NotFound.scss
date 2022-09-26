@@ -1,0 +1,27 @@
+@import '../../styles/main.scss';
+
+.not-found {
+  height: calc(100% - 55px);
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &--wrapper {
+    text-align: center;
+  }
+  
+  p, h1 {
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 120px;
+  }
+  
+  p {
+    padding-bottom: 60px;
+  }
+}

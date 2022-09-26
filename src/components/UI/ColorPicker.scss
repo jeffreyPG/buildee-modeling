@@ -1,0 +1,12 @@
+@import '../../styles/main.scss';
+
+.colorPicker{
+  width: 75%;
+  border: 1px solid #C4C1C1;
+  background-color: #f3f3f4;
+  border-radius: 2px;
+  > input { 
+    padding: 5px 0 5px 10px;
+    height: 100%;
+  }
+}

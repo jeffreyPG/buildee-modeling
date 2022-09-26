@@ -1,0 +1,97 @@
+@import '../../../../styles/main.scss';
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(var(--secondary-color), 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Inner {
+    margin: 20px;
+    box-shadow: 0 0 110px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+    text-align: center;
+  }
+
+  &Heading {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &Footer {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    &Left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 800px;
+    }
+
+    &Right {
+      padding-left: 80px;
+      display: flex;
+      align-items: center;
+
+      button {
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &Close {
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &Body {
+    padding: 0px 20px 20px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkboxContainer {
+  span {
+    width: unset;
+  }
+}
+
+.groupNameInput {
+  width: 20%;
+}
+
+.equipmentList {
+  max-height: 500px;
+  overflow: auto;
+}

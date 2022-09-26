@@ -1,0 +1,235 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tags.scss';
+@import '../../styles/components/tables.scss';
+
+.projectList {
+  &Name {
+    cursor: pointer;
+
+    > span {
+      color: var(--link-color);
+      flex-wrap: wrap-reverse;
+      white-space: normal;
+      word-break: break-all;
+    }
+  }
+
+  /* Unique styling */
+  .tableHeader {
+    cursor: pointer;
+  }
+
+  .tableRowItem {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    > label {
+      min-width: 140px;
+      padding-right: 10px;
+    }
+  }
+
+  .extras {
+    margin-left: auto;
+
+    &Dropdown {
+      width: 200px;
+      &Package {
+        width: 250px !important;
+      }
+    }
+  }
+
+  /* Mobile Styling */
+
+  @media (max-width: 699px) {
+    &Name {
+      padding: 10px 0;
+    }
+
+    .tags {
+      padding: 0;
+    }
+
+    .table {
+      &Row {
+        margin: 10px 0;
+        padding: 0;
+      }
+
+      &RowItem {
+        padding: 10px 20px;
+        border-bottom: 1px solid $color-white-darker;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      &MobileCollapseColumns {
+        display: none;
+      }
+
+      &MobileExpandColumns {
+        display: flex;
+      }
+
+      &MoreInfo {
+        background-color: $color-off-white;
+        text-align: center;
+        cursor: pointer;
+
+        span {
+          display: block;
+          margin: auto;
+        }
+        i {
+          position: relative;
+          top: -3px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 699px) {
+    .tableMobileHide {
+      display: none;
+    }
+  }
+
+  @media (min-width: 700px) {
+    .tableMobileShow {
+      display: none;
+    }
+  }
+}
+
+.scrollTableContainer {
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid $color-white-darker;
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    tr {
+      border-top: 1px solid $color-white-darker;
+      border-bottom: 1px solid $color-white-darker;
+    }
+    thead {
+      tr {
+        border: none;
+      }
+      th {
+        width: 130px;
+        background: $color-off-white;
+        color: $color-gray-dark;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        line-height: 1.5;
+        padding: 20px;
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+      }
+
+      th:first-child {
+        position: sticky;
+        left: -1px;
+        width: 250px;
+        z-index: 2;
+      }
+
+      th:last-child {
+        position: sticky;
+        right: 0;
+        width: 100px;
+        z-index: 2;
+      }
+    }
+
+    tbody {
+      td {
+        width: 130px;
+        background: $color-white;
+        color: $color-gray-dark;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: 0.2px;
+        line-height: 1.5;
+        padding: 20px;
+        word-break: break-word;
+      }
+
+      td:first-child {
+        position: sticky;
+        left: -1px;
+        width: 250px;
+        z-index: 2;
+        box-shadow: 7px 2px 4px 0 rgba(0, 0, 0, 0.1);
+      }
+
+      td:last-child {
+        position: sticky;
+        right: 0;
+        width: 100px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.emptyList {
+  box-shadow: none !important;
+}
+
+.scrollExtra {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  color: #2c3444;
+}
+
+.sortASC {
+  i {
+    transform: rotate(180deg);
+  }
+}
+
+.measurePackageIcon {
+  color: var(--primary-color);
+  position: absolute;
+  top: 0px;
+  left: 5px;
+}
+
+.mobileView {
+  position: relative !important;
+}
+
+.firstColumnWithCheckbox {
+  > div {
+    display: flex;
+  }
+}
+
+.trItem {
+  cursor: pointer;
+  &:hover {
+    background: $color-off-white !important;
+    td {
+      background: $color-off-white !important;
+    }
+  }
+}

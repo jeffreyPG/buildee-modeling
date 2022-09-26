@@ -1,0 +1,59 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+orbs:
+  aws-s3: circleci/aws-s3@1.0.11
+  cypress: cypress-io/cypress@1.13.0
+executors:
+  base10-qa:
+    docker:
+      - image: 'cypress/base:10'
+    environment:
+      CYPRESS_baseUrl: https://qa-graphql.buildee.com
+      CYPRESS_api_url: https://qa-graphql.buildee.com
+      CYPRESS_test_user: tester@simuwatt.com
+      CYPRESS_test_organization: 5dd48108a8d257000f256f57
+jobs:
+  build:
+    docker:
+      - image: circleci/node:lts
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - yarn-packages-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+
+      - run: yarn test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build
+  nightly-qa:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - cypress/run:
+          yarn: true
+          executor: base10-qa

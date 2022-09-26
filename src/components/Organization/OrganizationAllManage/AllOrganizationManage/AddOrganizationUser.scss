@@ -1,0 +1,104 @@
+@import '../../../../styles/main.scss';
+@import '../../../../styles/components/tables.scss';
+
+.modal {
+  .modalInner {
+    min-width: 500px;
+  }
+  .modalHeading {
+    align-items: unset;
+  }
+  .modalBody {
+    max-height: 600px;
+    min-height: 300px;
+    overflow-y: auto;
+    position: relative;
+  }
+  .loader {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+  .modalFooter {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    .button {
+      width: 25%;
+      margin-left: 20px;
+    }
+  }
+}
+
+.tableRowRemoveItem {
+  cursor: pointer;
+  i {
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.iconDisabled {
+  pointer-events: none;
+  color: $color-gray-light;
+  cursor: default;
+  &:hover {
+    color: $color-gray-light;
+  }
+}
+
+.notFound {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: $color-error;
+}
+
+.inputField {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.userList {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 20px;
+  &Item {
+    margin-bottom: 4px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid $color-white-darker;
+    &:hover {
+      border: 1px solid var(--primary-color);
+    }
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+  }
+  &NotFound {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid $color-white-darker;
+  }
+  &SelectedItem {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid $color-white-darker;
+    display: flex;
+    justify-content: space-between;
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+.textLeft {
+  text-align: left;
+}

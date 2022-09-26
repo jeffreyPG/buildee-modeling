@@ -1,0 +1,289 @@
+@import '../../../styles/main.scss';
+@import '../../../styles/components/panel.scss';
+@import '../../../styles/components/tags.scss';
+@import '../../../styles/components/autosuggest.scss';
+
+.buildingDetailsEdit {
+  .detail {
+    width: 100%;
+    margin: 30px 0;
+
+    p {
+      margin: 0;
+    }
+
+    label,
+    .customFieldsLabel {
+      display: block;
+      margin-bottom: 5px;
+      color: $color-gray;
+
+      @media (min-width: 600px) {
+        margin-bottom: 0;
+        min-width: 200px;
+        max-width: 300px;
+      }
+    }
+
+    input,
+    .selectContainer {
+      max-width: 400px;
+      max-height: 45px;
+      width: 100%;
+    }
+
+    .selectContainer + input {
+      margin-left: 10px;
+    }
+
+    .countrySelectContainer + input {
+      margin-left: 0px !important;
+    }
+
+    @media (min-width: 600px) {
+      display: flex;
+    }
+  }
+
+  .detailMarginSmall {
+    margin-bottom: 10px;
+  }
+
+  .detailMarginSmall + .detailMarginSmall {
+    margin-top: 10px;
+  }
+}
+
+.contacts {
+  &Inputs {
+    width: 100%;
+
+    button {
+      max-width: 400px;
+      width: auto;
+    }
+  }
+
+  &Single {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-gray-light;
+    }
+
+    > div:not(.contactsRemove) {
+      width: calc(100% - 30px);
+      margin-right: 20px;
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      @media (min-width: 650px) {
+        width: calc(48% - 30px);
+      }
+
+      @media (min-width: 1050px) {
+        width: calc(24% - 30px);
+      }
+    }
+  }
+
+  &Remove {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px 6px;
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+  }
+}
+
+.customFields {
+  &Single {
+    position: relative;
+  }
+
+  &Remove {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px 6px;
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  &Inputs {
+    > div {
+      margin-bottom: 15px;
+
+      @media (min-width: 600px) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    input {
+      margin-bottom: 5px;
+      @media (min-width: 600px) {
+        width: 48%;
+      }
+    }
+  }
+}
+
+.nestedFields {
+  &Single {
+    position: relative;
+  }
+
+  &Remove {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px 6px;
+    margin-left: 15px;
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  &Inputs {
+    > div {
+      margin-bottom: 15px;
+    }
+
+    input {
+      margin-bottom: 5px;
+    }
+  }
+
+  &Row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .selectContainer {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.addressFields {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 400px;
+
+  input,
+  .selectContainer {
+    margin-bottom: 10px;
+  }
+
+  .street {
+    width: 100%;
+  }
+
+  .city {
+    flex: 3;
+    margin-right: 10px;
+
+    @media (max-width: 400px) {
+      min-width: 100%;
+    }
+  }
+
+  .state {
+    flex: 2;
+    min-width: 80px;
+    margin-right: 10px;
+  }
+
+  .zip {
+    flex: 2;
+    min-width: 80px;
+  }
+}
+
+.buildingImage {
+  position: relative;
+
+  img {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &Remove {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px 9px;
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+  }
+
+  &Temp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 100px;
+    background: $color-gray-lightest;
+
+    i {
+      font-size: 40px;
+      color: var(--secondary-color);
+    }
+  }
+
+  &Spinner {
+    width: 170px;
+    height: 100px;
+  }
+}
+
+.autosuggestTags {
+  width: 100%;
+  max-width: 400px;
+
+  button {
+    width: auto;
+    padding: 10px 16px;
+  }
+}
+
+.useTypeDropdownContainer {
+  max-width: 400px;
+  max-height: 45px;
+  min-width: 400px;
+  min-height: 45px;
+  margin-bottom: 15px;
+}

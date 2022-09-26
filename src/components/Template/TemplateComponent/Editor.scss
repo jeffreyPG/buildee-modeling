@@ -1,0 +1,138 @@
+@import '../../../styles/main.scss';
+@import 'base/_buttons.scss';
+@import '../../../styles/components/extras.scss';
+@import '../../Building/Building.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.leftside p {
+  max-width: 240px;
+  font-size: 10px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.leftside h5 {
+  padding: 0;
+}
+
+.rightside {
+  margin-top: 40px;
+  border: 1px solid $color-white-darker;
+  width: 900px;
+  background-color: $color-white;
+  display: block;
+}
+
+.upper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $color-white-darker;
+  border-bottom: 1px solid $color-white-darker;
+}
+.upper p {
+  font-size: 12px;
+  height: 40px;
+}
+
+.lower {
+  width: 100%;
+  border: 1px solid $color-white-darker;
+}
+
+.buttonAdd {
+  margin-right: 10px;
+  min-width: none;
+}
+
+.specialone {
+  margin-right: 50px;
+  margin-left: 115px;
+}
+
+.listDocument {
+  display: flex;
+  justify-content: space-between;
+}
+
+.countBtn {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  border: 1px solid $color-white-darker;
+  height: 30px;
+  margin-left: 4px;
+  min-width: 2%;
+  margin-right: 5px;
+}
+.moreButton {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-bottom: 7px;
+  margin-left: 4px;
+  min-height: 38px;
+  margin-top: 5px;
+  min-width: 6%;
+  margin-right: 5px;
+  margin-bottom: 4px;
+}
+.orgSelectContainer {
+  flex: 1;
+}
+.DoucumentH {
+  min-width: 48%;
+  padding-left: 50px;
+}
+.AuthorH {
+  min-width: 25%;
+  padding-left: 30px;
+}
+.DatedH {
+  min-width: 15%;
+}
+.DocumentName {
+  min-width: 46%;
+}
+.DocumentName p {
+  font-size: 11px;
+}
+.AuthorName {
+  min-width: 25%;
+  align-items: center;
+  justify-content: center;
+}
+.AuthorName p {
+  font-size: 14px;
+}
+.DateUpdate {
+  min-width: 15%;
+  margin-right: 5px;
+}
+
+.DateUpdate p {
+  font-size: 14px;
+}
+
+.FileInput {
+  display: none;
+}
+
+.Counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index {
+  position: absolute;
+}
+
+.uploadDisabled {
+  color: rgb(175, 41, 41);
+}

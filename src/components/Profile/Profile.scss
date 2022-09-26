@@ -1,0 +1,315 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tabs.scss';
+
+.profilePassword {
+  text-align: center;
+  min-height: $minusHeader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &Title {
+    color: var(--secondary-color);
+  }
+}
+
+.profile {
+  min-height: $minusHeader;
+  text-align: left;
+
+  .tabs {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .tab {
+    padding-bottom: 5px;
+  }
+
+  .panel {
+    margin-top: 20px;
+  }
+
+  &Wrap {
+    @media (min-width: 900px) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &Sidebar {
+    @media (min-width: 900px) {
+      width: 25%;
+    }
+  }
+
+  &Main {
+    @media (min-width: 900px) {
+      width: calc(70% - 50px);
+      margin-left: 50px;
+    }
+  }
+
+  &Detail {
+    margin-bottom: 45px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &Options {
+    margin: 30px 0 40px;
+
+    a {
+      margin-right: 20px;
+    }
+  }
+
+  &Orgs {
+    color: var(--primary-text-color);
+    transition: color 300ms;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &ShowPolicy {
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+  }
+
+  .radioContainer {
+    label {
+      margin-right: 20px;
+    }
+  }
+
+  &TextContent {
+    p {
+      margin: 2px 0;
+      font-size: 14px;
+    }
+
+    h4 {
+      margin: 5px 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+
+  &Terms {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &TermsHeader {
+    text-align: center;
+    padding: 8vh 0 10vh;
+
+    svg {
+      padding: 10px 0;
+    }
+  }
+
+  &Terms {
+    .header {
+      margin-bottom: 30px;
+      text-align: center;
+
+      svg {
+        margin: 20px 0;
+      }
+    }
+
+    .inner {
+      padding-bottom: 160px;
+    }
+
+    .panelActions {
+      // accept footer
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 10px;
+      background-color: white;
+
+      .container {
+        @media (min-width: 800px) {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+        }
+      }
+
+      button {
+        margin-left: 0;
+      }
+
+      label {
+        display: block;
+        margin-right: 40px;
+
+        span {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+
+    .templateBack {
+      margin-bottom: 30px;
+      padding-top: 30px;
+      text-align: left;
+      font-size: 14px;
+      color: $color-gray;
+      cursor: pointer;
+
+      i {
+        margin-right: 10px;
+        animation-duration: 1000ms;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        transition: 300ms;
+      }
+
+      &:hover {
+        i {
+          animation-name: bounce;
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateX(0);
+        }
+        40% {
+          transform: translateX(-6px);
+        }
+        60% {
+          transform: translateX(-2px);
+        }
+      }
+    }
+  }
+}
+
+.profileSettings {
+  .profileSetting {
+    > h3 {
+      margin-bottom: 10px;
+    }
+    > p {
+      margin-top: 0;
+    }
+  }
+}
+
+.orgSelection {
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    width: 48%;
+  }
+
+  span {
+    display: inline;
+  }
+}
+
+.passwordForm {
+  > span {
+    margin: 50px 0;
+  }
+
+  span {
+    display: block;
+    padding: 10px;
+    background-color: $color-error;
+    color: white;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  > div {
+    margin: 20px 0;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  button {
+    margin-top: 50px;
+  }
+}
+.error {
+  text-align: left;
+  padding: 5px;
+  color: white;
+  background-color: $color-error;
+}
+
+.privacySpan {
+  text-decoration: underline;
+}
+
+.formError {
+  color: $color-error;
+}
+
+.detailForm {
+  &Field {
+    span {
+      color: $color-gray-dark !important;
+    }
+  }
+  &Label {
+    color: $color-gray-dark !important;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.avatarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  button + button {
+    margin-left: 10px;
+  }
+}
+
+.mfaOption {
+  margin-left: -10px;
+}

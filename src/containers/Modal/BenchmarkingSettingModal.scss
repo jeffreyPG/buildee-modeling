@@ -1,0 +1,113 @@
+@import './Modal.scss';
+
+@import '../../styles/main.scss';
+
+.modalInner {
+  height: 100%;
+}
+
+.templates {
+  padding: 20px;
+
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+    }
+  }
+
+  .modalDescription {
+    margin-bottom: 20px;
+  }
+
+  .detail {
+    display: flex;
+    // align-items: center;
+    
+    label,
+    .customFieldsLabel {
+      display: block;
+      margin-bottom: 5px;
+      color: $color-gray;
+
+      @media (min-width: 600px) {
+        margin-bottom: 0;
+        min-width: 200px;
+        max-width: 300px;
+        padding-top: 10px;
+      }
+    }
+
+    input,
+    .selectContainer {
+      max-width: 400px;
+      max-height: 45px;
+      width: 100%;
+    }
+  }
+
+  .nestedFields {
+    &Single {
+      position: relative;
+    }
+  
+    &Remove {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 5px 6px;
+      margin-left: 15px;
+      background-color: $color-gray;
+      color: $color-white;
+      cursor: pointer;
+    }
+  
+    &Inputs {
+      > div {
+        margin-bottom: 15px;
+      }
+  
+      input {
+        margin-bottom: 5px;
+      }
+    }
+  
+    &Row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &Footer {
+    padding: 0px 20px 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+
+    button {
+      width: auto;
+    }
+
+    button + button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.useTypeDropdownContainer {
+  max-width: 400px;
+  max-height: 45px;
+  min-width: 400px;
+  min-height: 45px;
+  margin-bottom: 15px;
+}
+

@@ -1,0 +1,30 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/empty.scss';
+
+.ConstructionTab {
+  &Empty {
+    padding-top: 20px;
+    text-align: center;
+
+    button {
+      width: auto;
+      margin: auto;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.empty{
+  margin-top: 100px;
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.settings {
+
+  .nameChange {
+    margin-bottom: 60px;
+
+    p {
+      margin: 0;
+      padding: 10px;
+      background-color: $color-error;
+      color: white;
+    }
+  }
+
+  .orgImage {
+    margin-bottom: 60px;
+
+    span {
+      width: 320px;
+    }
+
+    input {
+      display: none;
+    }
+  
+    img {
+      max-width: 400px;
+      width: 100%;
+    }
+
+    &Container {
+      position: relative;
+      display: inline-block;
+    }
+  
+    &Remove {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      padding: 5px 9px;
+      background-color: $color-gray;
+      color: $color-white;
+      cursor: pointer;
+    }
+  
+    &Temp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 100px;
+      background: $color-gray-lightest;
+  
+      i {
+        font-size: 40px;
+        color: var(--secondary-color);
+      }
+    }
+  
+    &Spinner {
+      width: 170px;
+      height: 100px;
+    }
+  }
+
+  .passwordExpiry {
+    input {
+      max-width: 100px;
+    }
+  }
+ 
+  .checkboxContainer {
+    input {
+      display: none;
+      margin-top: 0;
+  
+      &.checked + span:after {
+        background-color: var(--primary-color);
+      }
+      &.checked + span:before {
+        display: inline-block;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+@import '../../../styles/main.scss';
+
+.ToggleTab {
+  display: flex;
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  &Item {
+    position: relative;
+    border-radius: 5px;
+    border: 2px solid $color-white-darker;
+    padding: 6px 14px 7px 16px;
+    height: 38px !important;
+    background: #f0f3f6;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    &Active {
+      background: $color-white;
+      z-index: 1;
+    }
+  }
+  &Item + &Item {
+    margin-left: -5px;
+  }
+}

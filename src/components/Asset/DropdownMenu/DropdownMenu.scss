@@ -1,0 +1,19 @@
+@import '../../../styles/main.scss';
+@import '../../../styles/components/extras.scss';
+@import '../../../styles/components/tabs.scss';
+
+.dropDownMenu {
+  margin-left: 20px;
+  &List {
+    width: 200px;
+  }
+  &Selected {
+    cursor: pointer;
+    &:hover {
+      color: var(--link-color);
+    }
+  }
+  &Active {
+    color: var(--link-color);
+  }
+}

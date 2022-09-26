@@ -1,0 +1,143 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/extras.scss';
+
+.utilityEnduse {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+
+  .panelContent {
+    padding: 0;
+    .chartSetting {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding-right: 25px;
+      justify-content: space-between;
+    }
+    .selectContainer {
+      max-width: 160px;
+      select {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &Loading {
+    padding: 40px 0 20px 0;
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+  &Error {
+    text-align: left;
+  }
+
+  small {
+    margin: 0;
+    padding-top: 30px;
+    text-align: left;
+    display: block;
+  }
+
+  .customTooltip {
+    min-width: 180px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    border: none;
+
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h2,
+    h3 {
+      color: var(--header-text-color);
+    }
+
+    span {
+      font-size: 14px;
+    }
+
+    svg {
+      margin-top: 8px;
+    }
+
+    &Main {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+
+      > div {
+        padding-left: 5px;
+      }
+    }
+  }
+  .sourceLink {
+    margin: 10px;
+    font-size: 14px;
+    color: var(--primary-color);
+    a {
+      color: var(--primary-color);
+    }
+  }
+  &Chart {
+    margin-top: 30px;
+  }
+}
+
+.recharts {
+  &Legend {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-column-gap: 10px;
+
+    &Single {
+      position: relative;
+      padding: 10px 30px 10px 20px;
+
+      h3 {
+        margin: 0;
+      }
+
+      span {
+        font-size: 12px;
+        color: $color-gray;
+      }
+
+      svg {
+        position: absolute;
+        top: 12px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+.info {
+  cursor: pointer;
+  &:hover {
+    color: var(--link-color);
+  }
+  &Tooltip {
+    color: var(--header-text-color);
+  }
+}
+
+.relative {
+  position: relative !important;
+}
+
+.extraTool {
+  position: absolute !important;
+  top: 11px;
+  right: 0px;
+}

@@ -1,0 +1,50 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+@import '../../styles/components/tables.scss';
+
+.docuEmtpy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &Body {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+    &Title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    &Description {
+      color: $color-gray;
+    }
+  }
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+    button + button {
+      margin-left: 100px;
+    }
+  }
+}
+.textCenter {
+  text-align: center;
+}
+.documentTable {
+  &Header {
+    padding: 0px 10px 0px 10px !important;
+    &Button {
+      width: 65px;
+    }
+  }
+}
+
+.extrasButton {
+  width: 65px !important;
+  padding: 0px 19px !important;
+}

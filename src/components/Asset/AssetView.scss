@@ -1,0 +1,62 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tabs.scss';
+@import '../../styles/components/extras.scss';
+
+.assets {
+  margin-top: 10px;
+  text-align: left;
+
+  .tabs {
+    padding-bottom: 20px;
+    background: transparent;
+    border-bottom: none;
+
+    .container {
+      padding: 0;
+    }
+
+    .tab {
+      padding-bottom: 15px;
+    }
+  }
+  
+  &Heading {
+		display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: $color-gray;
+    }
+
+    button {
+      width: auto;
+      margin: 0;
+
+      i {
+        margin-right: 10px;
+      }
+    
+      span {
+        display: none;
+    
+        @media (min-width: 600px) {
+          display: inline;
+        }
+      }
+    }
+
+    &Buttons {
+      display: flex;
+    }
+
+    .extras {
+      margin-left: 10px;
+
+      &Dropdown {
+        width: 165px;
+      }
+    }
+  }
+}

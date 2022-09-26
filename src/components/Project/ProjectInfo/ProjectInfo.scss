@@ -1,0 +1,73 @@
+@import '../../../styles/main.scss';
+
+.projectInfo {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  border: 1px solid $color-white-darker;
+  background-color: $color-white;
+  padding: 20px 20px 40px 20px;
+  min-width: 500px;
+  z-index: 15;
+
+  @media (max-width: 799px) {
+    max-width: 300px;
+    min-width: 300px;
+    top: 40px;
+    left: 0px;
+  }
+
+  &Header {
+    margin-bottom: 20px;
+    span {
+      font-size: 16px;
+      line-height: 24px;
+      display: inline-block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+    }
+
+    .closeIcon {
+      cursor: pointer;
+      float: right;
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+  }
+
+  &Input {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input,
+    textarea {
+      font-weight: 400;
+    }
+
+    textarea {
+      min-height: 60px;
+      max-width: 100%;
+
+      @media (min-width: 650px) {
+        min-height: 200px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Source {
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+}

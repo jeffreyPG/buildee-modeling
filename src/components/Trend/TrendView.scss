@@ -1,0 +1,90 @@
+@import '../../styles/main.scss';
+
+.trend {
+  margin-top: 10px;
+  text-align: left;
+
+  &DateRangeError {
+    width: 100%;
+    padding: 5px;
+    background-color: $color-error;
+    color: white;
+    text-align: center;
+  }
+
+  &DatePicker {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    height: 38px;
+    padding: 0 12px;
+  }
+
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: $color-gray;
+
+      @media (max-width: 900px) {
+        order: 1;
+      }
+    }
+
+    button {
+      width: auto;
+
+      i {
+        margin-right: 10px;
+      }
+
+      span {
+        display: none;
+
+        @media (min-width: 600px) {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 900px) {
+        order: 2;
+      }
+    }
+
+    .dates {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 20px;
+
+      input {
+        max-height: 38px;
+      }
+
+      span {
+        margin: 0 10px;
+      }
+
+      &Buttons {
+        display: flex;
+      }
+
+      button {
+        display: flex;
+        margin-left: 10px;
+      }
+
+      @media (max-width: 900px) {
+        order: 3;
+        width: 100%;
+        margin-right: 0px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      flex-wrap: wrap;
+    }
+  }
+}

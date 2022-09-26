@@ -1,0 +1,49 @@
+@import '../../styles/main.scss';
+
+.activeRoute {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.loggedOutHeader {
+  background-color: var(--secondary-color);
+  padding: 15px 0;
+
+  h4 {
+    margin: 0
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    :local(a) {
+      text-decoration: none;
+      color: $color-white;
+    }
+
+  }
+
+  &Left {
+    line-height: 0;
+    text-align: left;
+  }
+
+  &Right {
+    padding: 2.5px 0;
+  }
+}
+
+.logo-svg {
+  width: 100%; 
+  height: auto;
+  max-height: 20px;
+
+  path {
+    fill: $color-white;
+  }
+  .green {
+    fill: $color-white;
+  }
+}

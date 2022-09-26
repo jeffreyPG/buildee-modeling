@@ -1,0 +1,107 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/tables.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.portfolio {
+  min-height: $minusHeader;
+  text-align: left;
+
+  .panel {
+    margin-top: 20px;
+  }
+
+  i {
+    font-size: 16px;
+  }
+
+  &Heading {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &Wrap {
+    margin-top: 30px;
+    @media (min-width: 900px) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  &DisabledMsg {
+    text-align: center;
+    margin: 20px;
+  }
+
+  &Sidebar {
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: 900px) {
+      width: 30%;
+    }
+  }
+
+  &Main {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 900px) {
+      width: calc(70% - 50px);
+      margin-left: 50px;
+      margin-bottom: 50px;
+      min-height: 400px;
+    }
+    &Center {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &Options {
+    margin: 30px 0 40px;
+
+    a {
+      margin-right: 20px;
+    }
+  }
+
+  &Message {
+    flex: 100%;
+    color: var(--primary-color);
+    justify-content: flex-end;
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+  }
+
+  .radioContainer {
+    label {
+      margin-right: 20px;
+    }
+  }
+
+  .tabs {
+    padding-top: 0;
+    padding-left: 20px;
+  }
+
+  .tab {
+    padding-bottom: 5px;
+  }
+}
+
+.disable {
+  color: $color-gray-lightest;
+  &:hover {
+    color: $color-gray-lightest;
+  }
+}

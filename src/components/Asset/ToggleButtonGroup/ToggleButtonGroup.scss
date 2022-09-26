@@ -1,0 +1,36 @@
+@import '../../../styles/main.scss';
+
+.toggleGroupContainer {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  background-color: $color-white;
+  overflow: hidden;
+  margin: 0px 10px;
+}
+
+.toggleButton {
+  align-items: center;
+  justify-content: center;
+  padding: 5px 5px 5px 15px;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: rgba(0, 0, 0, 0.38);
+  border-radius: 0;
+}
+
+.toggleButton:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.toggleButtonSelected {
+  opacity: 1;
+  color: rgba(0, 0, 0, 0.54);
+  background-color: transparent;
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}

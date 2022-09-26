@@ -1,0 +1,39 @@
+@import '../../../../styles/main.scss';
+
+:global {
+    .qlImageTag {
+        padding: 2px 3px;
+        border-radius: 3px;
+        display: inline-block;
+        width: auto;
+        box-sizing: content-box;
+    }
+
+    .qlImageTag span{
+        display: none;
+    }
+
+    .qlImageTag[option=imageUpload] span{
+        display: inline-block;
+    }
+
+    .qlImageTag[option=buildingImage]:before {
+        content: "";
+        background-image: url(https://buildee-test.s3-us-west-2.amazonaws.com/public/domain_black_48dp.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .qlImageTag[option=profileImage]:before {
+        content: "";
+        background-image: url(https://buildee-test.s3-us-west-2.amazonaws.com/public/contacts_black_48dp.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}

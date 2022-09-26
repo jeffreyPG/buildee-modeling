@@ -1,0 +1,45 @@
+@import '../../../styles/main.scss';
+
+.checkboxContainer {
+  max-width: 40%;
+  min-width: 40%;
+  margin-left: 40px;
+  margin-right: 0px !important;
+  min-height: 40px;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+    min-width: 100%;
+    margin-left: 0px;
+  }
+
+  span {
+    width: 95%;
+    margin: 10px 0;
+    height: 100%;
+  }
+}
+
+.fieldNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input {
+  border: 1px solid #e9edf1 !important;
+  border-radius: 2px !important;
+  background-color: #fff !important;
+  display: block !important;
+  width: 100% !important;
+  padding: 12px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: $color-text !important;
+  font-family: $font-primary !important;
+}
+
+.customLabelSpan {
+  font-size: 13.3333px;
+  width: 100%;
+}

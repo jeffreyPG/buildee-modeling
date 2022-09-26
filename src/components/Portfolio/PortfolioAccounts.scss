@@ -1,0 +1,97 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/tables.scss';
+@import '../../styles/components/empty.scss';
+
+
+.portfolioAccounts {
+	padding: 20px;
+
+	&Heading {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+	.button {
+    display: inline-block;
+    width: auto;
+  }
+
+  &Detail {
+
+    h3 {
+      margin-bottom: 40px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &Table {
+    margin-bottom: 30px;
+  }
+
+  &Single {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &Name {
+    display: flex;
+    flex-wrap: wrap;
+
+    span {
+      color: var(--primary-color);
+      width: 100%;
+    }
+  }
+
+  &Pointer {
+    cursor: pointer;
+  }
+
+  &ColLast {
+    justify-content: flex-end;
+    align-items: center;
+
+    i {
+      margin-left: auto;
+    }
+  }
+
+  &All {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    border-bottom: 1px solid $color-white-darker;
+
+    p {
+      padding-left: 15px;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+.empty{
+  width: 100%;
+  padding-top: 30px;
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+    button + button {
+      margin-left: 100px;
+    }
+  }
+}

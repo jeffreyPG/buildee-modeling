@@ -1,0 +1,101 @@
+.panel {
+  width: 100%;
+  margin: 35px 0;
+  border: 1px solid $color-white-darker;
+  background-color: $color-white;
+  border-radius: 4px;
+  text-align: left;
+
+  &Header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-bottom: 1px solid $color-white-darker;
+
+    h3 {
+      margin: 0;
+      display: inline-block;
+      font-size: 18px;
+
+      span {
+        text-transform: capitalize;
+      }
+    }
+
+    @media (min-width: 700px) {
+      padding: 20px 30px;
+    }
+  }
+
+  &Edit {
+    cursor: pointer;
+
+    &Hide { // for the dropdown on mobile
+      @media (max-width: 699px) {
+        display: none;
+      }
+    }
+  }
+  
+  &Content {
+    padding: 20px 30px;
+    height: 100%;
+
+    &Hide { // for the dropdown on mobile
+      @media (max-width: 699px) {
+        display: none;
+      }
+    }
+  }
+
+  &Actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    border-top: 1px solid $color-white-darker;
+
+    button {
+      width: auto;
+      margin-left: 10px;
+    }
+
+    &Hide { // for the dropdown on mobile
+      @media (max-width: 699px) {
+        display: none;
+      }
+    }
+  }
+
+  &Dropdown { // for hiding and showing details on 
+
+    &Click {
+      display: none;
+      padding: 5px 10px 5px 0;
+      cursor: pointer;
+
+      @media (max-width: 699px) {
+        display: inline-block;
+      }
+
+    }
+  }
+
+  &Footer {
+    padding: 15px 20px;
+    border-top: 1px solid $color-white-darker;
+
+    .link {
+      color: var(--link-color);
+      text-transform: uppercase;
+      text-align: right;
+      width: 100%;
+      display: block;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+}

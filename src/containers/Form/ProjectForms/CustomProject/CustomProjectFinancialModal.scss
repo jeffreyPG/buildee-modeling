@@ -1,0 +1,236 @@
+@import '../../../../styles/main.scss';
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color-white, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Inner {
+    margin: 20px;
+    box-shadow: 0 0 10px #313131;
+    border-radius: 2px;
+    background-color: $color-white;
+    max-width: 1000px;
+    min-width: 900px;
+  }
+
+  &Heading {
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  &Footer {
+    padding: 0px;
+    border: 1px solid $color-white-darker;
+    &Right {
+      display: flex;
+      float: right;
+      padding-right: 20px;
+      button {
+        &:not(:first-child) {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  &Close {
+    text-align: right;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+  &Body {
+    padding: 0px 20px 20px;
+    max-height: 600px;
+    overflow: auto;
+  }
+}
+
+.projectsFinancial {
+  &Toggle {
+    margin: 0 0 40px;
+    color: var(--link-color);
+    cursor: pointer;
+
+    i {
+      color: $color-text;
+    }
+  }
+
+  &Extrafields {
+    margin-bottom: 40px;
+  }
+
+  &Inputs {
+    padding: 20px;
+    border: 1px solid $color-white-darker;
+    border-radius: 2px;
+    background-color: $color-white;
+
+    @media (min-width: 800px) {
+      width: 70%;
+      padding: 40px;
+    }
+  }
+
+  &Input {
+    margin-bottom: 40px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    span {
+      position: relative;
+    }
+
+    i {
+      position: absolute;
+      z-index: 0;
+      top: -12px;
+      left: 0;
+      padding: 11px;
+      background-color: $color-off-white;
+      border-right: 1px solid $color-white-darker;
+    }
+
+    input {
+      position: relative;
+      z-index: 1;
+      padding-left: 60px;
+      font-weight: 400;
+      background: transparent;
+
+      &:invalid {
+        border: 1px solid $color-white-darker;
+      }
+
+      &:not(:placeholder-shown):invalid {
+        border: 1px solid $color-error;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &InputNoIcon {
+    margin-bottom: 40px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    span {
+      position: relative;
+    }
+
+    input {
+      position: relative;
+      z-index: 1;
+      font-weight: 400;
+      background: transparent;
+
+      &:invalid {
+        border: 1px solid $color-white-darker;
+      }
+
+      &:not(:placeholder-shown):invalid {
+        border: 1px solid $color-error;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &InputLargeIcon {
+    margin-bottom: 40px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    span {
+      position: relative;
+    }
+
+    i {
+      position: absolute;
+      z-index: 0;
+      top: -12px;
+      left: 0;
+      padding: 12px;
+      background-color: $color-off-white;
+      border-right: 1px solid $color-white-darker;
+    }
+
+    input {
+      position: relative;
+      z-index: 1;
+      padding-left: 70px;
+      font-weight: 400;
+      background: transparent;
+
+      &:invalid {
+        border: 1px solid $color-white-darker;
+      }
+
+      &:not(:placeholder-shown):invalid {
+        border: 1px solid $color-error;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Unit {
+    margin: 0 0 30px;
+  }
+}
+
+.container-column-2 {
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.2em;
+  }
+}
+
+.container-column-3 {
+  @media (min-width: 600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.2em;
+  }
+}

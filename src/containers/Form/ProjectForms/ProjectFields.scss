@@ -1,0 +1,78 @@
+@import '../../../styles/main.scss';
+
+.projectsFields {
+  &.labelNoTopMargin {
+    > div:first-of-type {
+      label {
+        margin-top: 5px;
+      }
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+
+    @media (max-width: 600px) {
+      font-size: 16px;
+    }
+  }
+
+  &Input {
+    margin-bottom: 40px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input {
+      font-weight: 400;
+
+      &:invalid {
+        border: 1px solid $color-white-darker;
+      }
+
+      &:not(:placeholder-shown):invalid {
+        border: 1px solid $color-error;
+      }
+    }
+
+    label,
+    small {
+      display: block;
+    }
+
+    label {
+      margin: 25px 0 5px;
+    }
+
+    small {
+      color: $color-gray;
+      margin-top: 5px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &Replacement {
+    margin-top: 40px;
+  }
+
+  .radioContainer {
+    display: flex;
+
+    label {
+      margin: 5px 10px 5px 0;
+    }
+  }
+
+  .advanced {
+    display: flex;
+    justify-content: flex-end;
+    display: -webkit-flex;
+    -webkit-justify-content: flex-end;
+  }
+}

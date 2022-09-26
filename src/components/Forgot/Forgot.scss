@@ -1,0 +1,19 @@
+@import '../../styles/main.scss';
+
+.forgot {
+  text-align: center;
+  min-height: $minusHeader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &Form {
+    input {
+      width: 100%;
+      font-size: 16px;
+      padding: 8px 12px;
+      margin: 10px 0;
+    }
+  }
+}
+

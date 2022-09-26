@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.customYear {
+  text-align: initial;
+  padding: 15px 0px;
+  > div {
+    font-weight: bold;
+  }
+  label{
+    display: block;
+    padding: 10px 0px;
+  }
+}
+
+.error {
+  margin-bottom: 10px;
+  text-align: center;
+  color: $color-red;
+  font-size: 20px;
+}

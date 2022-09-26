@@ -1,0 +1,66 @@
+@import '../../../styles/main.scss';
+
+.projectsIncentive {
+	p {
+    margin: 0 0 30px;
+  }
+
+  label, small {
+    display: block;
+    color: $color-gray;
+  }
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    &:invalid {
+      border: 1px solid $color-white-darker;
+    }
+
+    &:not(:placeholder-shown):invalid {
+      border: 1px solid $color-error;
+    }
+  }
+
+  small {
+    margin-top: 5px;
+  }
+
+  &Details {
+    padding-top: 10px;
+  }
+
+  &States {
+
+    small {
+      display: inline-block;
+      
+      &:after {
+        content: ',';
+        padding-right: 5px;
+        display: inline-block;
+      }
+
+      &:last-child {
+        &:after {
+          content: '';
+        }
+      }
+
+      &:first-child {
+        &:after {
+          content: '';
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+  &Unit {
+    p {
+      margin: 0 0 5px;
+    }
+    margin: 0 0 25px;
+  }
+}

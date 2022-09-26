@@ -1,0 +1,173 @@
+@import '../../../styles/base/_variables.scss';
+@import '../../../containers/Form/FormFields/Field.module.scss';
+
+.imagesField {
+  &Container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0;
+  }
+
+  &Input {
+    width: 100%;
+    margin: 1.4em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      padding: 0.625em;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--link-color);
+    }
+
+    input {
+      opacity: 0;
+      margin: 0;
+    }
+  }
+
+  &Image {
+    position: relative;
+    opacity: 1;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      max-width: 31%;
+    }
+
+    .loading {
+      opacity: 0.5;
+    }
+
+    &Loader {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .checkboxContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    input {
+      margin: 0;
+      width: auto;
+      &.checked + span:after {
+        background-color: var(--primary-color);
+      }
+      &.checked + span:before {
+        display: inline-block;
+      }
+    }
+    span {
+      font-size: 13px;
+      padding-left: 5px;
+    }
+  }
+
+  &Remove {
+    position: absolute;
+    top: -0.625em;
+    right: -0.625em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.875em;
+    height: 1.875em;
+    padding: 5px 9px;
+    background-color: $color-gray;
+    color: $color-white;
+    cursor: pointer;
+
+    &Confirmation {
+      position: absolute;
+      top: 0.5em;
+      left: 50%;
+      width: 100%;
+      padding: 0.5em;
+      transform: translateX(-50%);
+      text-align: center;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $color-white-dark;
+        opacity: 0.94;
+        border: 1px solid $color-white-darker;
+        border-radius: 2px;
+      }
+
+      div {
+        position: relative;
+        z-index: 20;
+      }
+
+      span {
+        position: relative;
+        z-index: 20;
+        display: inline-block;
+        padding: 0.5em;
+        color: white;
+        cursor: pointer;
+      }
+
+      .confirmationButtons {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .yes {
+        background-color: $color-error;
+      }
+
+      .no {
+        background-color: $color-success;
+      }
+    }
+  }
+  .field {
+    align-items: center;
+  }
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  > i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+}

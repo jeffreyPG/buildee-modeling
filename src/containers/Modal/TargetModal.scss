@@ -1,0 +1,74 @@
+@import './Modal.scss';
+@import '../../styles/main.scss';
+
+.templates {
+    padding: 20px;
+    align-items: center;
+    &Heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+  
+      h2 {
+        display: inline-block;
+        margin-top: 0;
+        font-size: 20px;
+      }
+
+      h4 {
+        display: inline-block;
+        margin-top: 0;
+        font-size: 15px;
+      }
+    }
+
+    &HeadingText {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addTarget {
+        width: auto;
+    }
+
+    .tableContainer {
+        width: 95%;
+    }
+
+    .saveTarget {
+        position: absolute;
+        right: 30px;
+        bottom: 10px;
+        width: auto;
+    }
+    .noTargetText {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &Content {
+        display: flex;
+        flex-direction: column;
+        max-height: 80%;
+        align-items: center;
+        justify-content: center;
+        
+        table {
+            border: 1px solid $color-gray-lightest;
+        }
+        tr {
+            border-bottom: 1px solid $color-gray-lightest;
+        }
+        tr:nth-child(odd) {
+            td {
+              background: $color-off-white;
+            }
+        }
+        th {
+            background: transparent;
+            color: $color-black;
+            font-weight: normal;
+        }
+    }
+}

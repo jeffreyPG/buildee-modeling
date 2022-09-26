@@ -1,0 +1,24 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "INTERFACE",
+        "name": "Equipment",
+        "possibleTypes": [
+          {
+            "name": "Boiler"
+          },
+          {
+            "name": "Chiller"
+          },
+          {
+            "name": "Fan"
+          },
+          {
+            "name": "Light"
+          }
+        ]
+      }
+    ]
+  }
+}

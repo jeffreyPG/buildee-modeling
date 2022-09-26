@@ -1,0 +1,175 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+@import '../../styles/components/empty.scss';
+
+.utilities {
+  margin-top: 10px;
+
+  &DateRangeError {
+    width: 100%;
+    padding: 5px;
+    background-color: $color-error;
+    color: white;
+  }
+
+  &DatePicker {
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #dadada;
+    height: 38px;
+    padding: 0 12px;
+  }
+
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: $color-gray;
+
+      @media (max-width: 1050px) {
+        order: 1;
+      }
+    }
+
+    button {
+      width: auto;
+
+      i {
+        margin-right: 10px;
+      }
+
+      span {
+        display: none;
+
+        @media (min-width: 600px) {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 1050px) {
+        order: 2;
+      }
+    }
+
+    .dates {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      margin-right: 20px;
+
+      input {
+        max-height: 38px;
+      }
+
+      span {
+        margin: 0 10px;
+      }
+
+      &Buttons {
+        display: flex;
+      }
+
+      button {
+        display: flex;
+        margin-left: 10px;
+      }
+
+      @media (max-width: 1050px) {
+        order: 3;
+        width: 100%;
+        margin-right: 0px;
+      }
+    }
+
+    .extras {
+      button {
+        margin: 0px !important;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &New {
+    margin: 50px auto;
+    background: $color-gray-lightest;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      width: auto;
+      margin: 10px;
+    }
+  }
+
+  .timeRangeFilter {
+    display: flex;
+    flex: 0;
+    padding: 10px;
+    align-items: center;
+    border: 2px solid $color-gray-lightest;
+    border-radius: 30px;
+    color: $color-black;
+    flex-direction: row-reverse;
+    font-size: 12px;
+    cursor: pointer;
+    margin: 5px;
+  }
+}
+
+.extrasLink {
+  text-align: left;
+  i {
+    color: $color-gray-dark;
+  }
+  svg {
+    height: 19px;
+    width: 29px;
+
+    g {
+      transform: scale(0.5);
+    }
+  }
+
+  &:hover {
+    svg {
+      g {
+        path {
+          fill: var(--link-color);
+        }
+      }
+    }
+  }
+}
+
+.empty {
+  height: calc(100vh - 400px);
+  &Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    button {
+      width: auto;
+    }
+    button + button {
+      margin-left: 100px;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}

@@ -1,0 +1,119 @@
+@import '../../../styles/main.scss';
+@import '../../../styles/components/extras.scss';
+@import '../../../styles/components/tables.scss';
+
+.well {
+    background: #eeefff;
+    padding: 15px;
+    button{
+      width:auto !important;
+    }
+    &_edit{
+      display : flex;
+      button {
+        display: inline;
+        width: auto;
+        margin-right: 10px;
+  
+        @media (min-width: 600px) {
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    
+  }
+
+  .transparentBackGround {
+    background: transparent;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .tab {
+    background: transparent;
+    padding: 5px 15px;
+    color:black;
+    border: none;
+    cursor: pointer;
+    text-transform: none;
+    &_active {
+      background: inherit;
+      color: #000;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--primary-color);
+      text-transform: none;
+    }
+  }
+  
+  .tab-content {
+    padding: 15px 5px;
+  }
+  
+  @for $i from 1 through 10{
+    .step-#{$i} {
+      max-width: 100% / $i;
+      width: auto;
+      div {
+        display: flex;
+        flex-direction: row;
+      }
+      button {
+        width: 100% !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: pre;
+        padding-left: 10px;
+        padding-right: 5px;
+      }
+    }
+  }
+  .navtabs {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    .limit{
+      opacity: 0.2;
+    }
+  }
+
+  .edit-tab-name {
+    background: #1122ff;
+    color: #fff;
+  }
+  .fuelDropdown{
+    display: inline-flex;
+    padding: 20px;
+    width: 100%;
+    
+    .fuelDropdownDiv{
+      display: inline-flex;
+      width: 50%;
+    }
+    label{
+      text-align: left;
+      margin-right: 90px
+    }
+  }
+  .customYear{
+    display: flex;
+    width: fit-content;
+    padding: 35px 0px 0px 60px;
+    label{
+      padding: 0px 80px 0px 70px;
+    }
+  }
+  .dropdownContainer { 
+    width: 70%;
+  }
+
+.description {
+  color: #000;
+  margin-top: 30px;
+  &Text{
+    font-size: 14px;
+    margin-top: 10px;
+  };
+}
+.name {
+  color: #000;
+}

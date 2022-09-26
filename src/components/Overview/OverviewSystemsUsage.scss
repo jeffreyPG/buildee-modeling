@@ -1,0 +1,16 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/panel.scss';
+
+.benchmarkSystemsUsage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  small {
+    margin: 0;
+    padding-top: 30px;
+    text-align: left;
+    display: block;
+  }
+}

@@ -1,0 +1,756 @@
+@import '../../../../styles/main.scss';
+
+.projects {
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 13.3333px;
+  }
+
+  label {
+    margin-right: 30px;
+
+    &.contentLabel {
+      display: flex;
+      vertical-align: top;
+      cursor: pointer;
+      flex-flow: wrap;
+      margin: 0;
+      background: $color-white;
+      padding: 0;
+
+      input {
+        width: auto;
+        display: none;
+        margin-top: 0;
+
+        + div {
+          background-color: #f8fbff;
+          padding: 15px 0 0;
+          margin-right: 5px;
+          width: 40px;
+
+          span {
+            position: relative;
+            display: block;
+            padding-left: 18px;
+            margin: 0 10px;
+            background-color: #f8fbff;
+
+            &::before {
+              content: '';
+              position: absolute;
+              z-index: 20;
+              font-family: Material Icons;
+              font-weight: 900;
+              color: $color-white;
+            }
+
+            &:before {
+              left: 3px;
+              top: 4px;
+              font-size: 14px;
+            }
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 2px;
+              left: 0;
+              height: 18px;
+              width: 19px;
+              background: #d3d3d3;
+            }
+          }
+        }
+
+        &:checked + div {
+          span {
+            &:before {
+              content: '';
+              position: absolute;
+              z-index: 20;
+              font-family: Material Icons;
+              font-weight: 900;
+              display: none;
+              color: $color-white;
+              background-color: var(--primary-color);
+            }
+
+            &::before {
+              content: '\E5CA';
+              left: 2px;
+              top: 4px;
+              font-size: 14px;
+              display: inline-block;
+              width: 15px;
+            }
+
+            &:after {
+              border: 2px solid var(--primary-color);
+            }
+          }
+        }
+      }
+
+      .nestedCheckboxContainer {
+        display: block;
+        width: 100%;
+        margin-left: 15%;
+        width: calc(100%- 15%);
+        padding: 10px;
+      }
+
+      > * {
+        margin: 0;
+      }
+    }
+    &.subContent {
+      margin-left: 20px;
+    }
+  }
+
+  .projectSelectContainer {
+    margin: 0 0 5px !important;
+    background-color: #f8fbff;
+    padding: 10px;
+
+    + span {
+      margin: 10px;
+    }
+  }
+
+  .subOptionLabel {
+    margin: 15px 5px !important;
+  }
+
+  .checkboxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px !important;
+    margin-left: 15% !important;
+    width: calc(100%- 15%);
+    background-color: #f8fbff;
+    padding: 15px;
+
+    &.projectCheckboxContainer > div {
+      width: 100%;
+      display: inline-block;
+
+      > label {
+        display: inline-block;
+      }
+    }
+
+    label {
+      min-width: 40%;
+    }
+
+    span {
+      font-size: 13.3333px;
+      width: 100%;
+
+      &:before {
+        top: 2px;
+      }
+    }
+  }
+
+  .selectContainer {
+    select {
+      font-size: 13.3333px;
+    }
+  }
+
+  .radioContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    > div {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 13.3333px;
+
+      &:before {
+        top: 2px;
+      }
+    }
+  }
+
+  .dropdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &Single {
+      width: 23%;
+      margin: 0 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    &Select {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      border: 1px solid $color-gray-light;
+      background-color: $color-white;
+
+      span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 5px 5px 5px;
+        background-color: inherit;
+        transition: background-color 200ms;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-gray-light;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &Options {
+      border-right: 1px solid $color-gray-light;
+      border-left: 1px solid $color-gray-light;
+
+      p {
+        margin: 0;
+        padding: 10px 5px;
+        background-color: $color-white;
+        border-bottom: 1px solid $color-gray-light;
+        transition: background-color 200ms;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color-gray-light;
+        }
+      }
+    }
+
+    &Display {
+      margin-bottom: 10px;
+
+      p {
+        position: relative;
+        display: inline-block;
+        margin: 5px 5px 0px 0;
+        padding: 2px 25px 2px 5px;
+        color: $color-white;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+      }
+
+      span {
+        position: absolute;
+        right: 2px;
+        top: -1px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .contentDiv {
+    background: $color-white;
+    border: 2px dashed lightgrey;
+    padding: 10px;
+  }
+
+  .twoColumn {
+    order: 2;
+    clear: right;
+
+    &:first-child {
+      float: none;
+      padding-left: 50%;
+
+      > div {
+        padding-left: 15px;
+        border-left: 2px dotted lightgrey;
+      }
+    }
+
+    &:nth-child(2) {
+      float: right;
+      width: 50%;
+      border-left: 2px dotted lightgrey;
+      padding-left: 15px;
+    }
+
+    &:nth-child(3) {
+      clear: left;
+      width: 100%;
+      border-right: 2px dotted lightgrey;
+
+      select,
+      .projectSelectContainer {
+        display: none;
+      }
+    }
+
+    &:nth-child(4) {
+      border-top: 2px dotted lightgrey;
+      padding-top: 15px;
+    }
+
+    .twoColumn {
+      margin-left: 50%;
+    }
+
+    &:nth-of-type(3) {
+      .twoColumn {
+        float: none;
+        margin-left: 0;
+        top: 0;
+      }
+    }
+  }
+
+  .order {
+    &Details {
+      &:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    &Number {
+      width: 65px;
+      display: inline-block;
+      margin-right: 20px;
+      background-color: $color-white;
+      height: 35px;
+
+      &.categoryOrder {
+        width: 50px;
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      &.categoryHeaderOrder {
+        background-color: transparent;
+      }
+
+      select {
+        height: 35px;
+        padding: 5px 9px;
+      }
+    }
+
+    &labelContent {
+      width: calc(100% - 70px);
+      display: inline-block;
+    }
+
+    &Description {
+      margin-bottom: 20px;
+      display: inline-block;
+      width: 100%;
+
+      &.contentHeader {
+        width: auto;
+      }
+
+      .projectstyle {
+        width: 50%;
+        float: left;
+        padding: 0 20px 20px 0;
+      }
+
+      .content {
+        clear: left;
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        margin: 0;
+        padding-top: 4px;
+      }
+
+      textarea {
+        margin-top: 10px;
+        font-size: 13.3333px;
+        resize: none;
+      }
+    }
+
+    .selectContainer {
+      select {
+        padding: 6px 10px;
+        padding-right: 20px !important;
+      }
+
+      &:after {
+        right: 6px;
+      }
+    }
+  }
+
+  .data {
+    p {
+      display: inline-block;
+      margin: 0;
+      padding-right: 5px;
+    }
+
+    &Clear {
+      width: 100%;
+      margin-top: 10px;
+      color: var(--primary-color);
+      font-size: 12px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .fieldSelector {
+    margin-bottom: 10px;
+    &Title {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    &Description {
+      font-size: 20px;
+      line-height: 27px;
+      font-weight: 500;
+    }
+  }
+
+  .fieldContainer {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    min-height: 30px;
+
+    &Item {
+      max-width: calc(100% - 100px);
+    }
+
+    &Clear {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 80px;
+      color: var(--primary-color);
+      font-size: 12px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.projectFilterDropdown {
+  display: flex;
+}
+
+.categorizationContainer {
+  width: 100%;
+  &Input {
+    > div {
+      height: 36px;
+      > div {
+        top: 6px;
+      }
+    }
+  }
+  &Selected {
+    display: flex;
+    justify-content: space-between;
+    .dropdownDisplay {
+      margin-top: 10px;
+      width: 200px;
+    }
+  }
+}
+
+.editorBody {
+  position: relative;
+  margin: 15px;
+  background-color: $color-white-dark;
+  z-index: 10;
+  cursor: move;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+  }
+
+  &Info {
+    background-color: var(--secondary-color);
+    color: var(--header-text-color);
+    font-size: 16px;
+    padding: 5px 10px;
+
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &Options {
+    position: relative;
+    padding: 15px;
+    cursor: default;
+
+    .title-preview {
+      margin-bottom: 20px;
+    }
+  }
+
+  &Warning {
+    display: inline-block;
+    margin-left: 15px;
+    color: $color-warning;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  &Preview {
+    font-size: 16px;
+
+    i {
+      color: var(--primary-color);
+    }
+
+    p {
+      margin: 0;
+
+      &:first-letter {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &Inner {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid $color-gray-light;
+  }
+
+  @media (min-width: 800px) {
+    &Options {
+      position: relative;
+      padding: 25px;
+    }
+
+    &:hover {
+      .contentOptions {
+        &:after {
+          opacity: 0.94;
+        }
+
+        i {
+          opacity: 0.7;
+
+          &.editing {
+            opacity: 1;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contentOptions {
+  position: relative;
+  z-index: 20;
+  display: inline-block;
+  width: auto;
+  margin: 15px;
+  padding: 7px 15px;
+  font-size: 22px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-white-dark;
+    opacity: 0.94;
+    transition: 250ms;
+    box-shadow: 0px 0px 6px 0px var(--primary-color);
+  }
+
+  &.optionsOpen {
+    &:after {
+      opacity: 0.94;
+    }
+
+    i {
+      opacity: 0.7;
+    }
+  }
+
+  i {
+    position: relative;
+    z-index: 20;
+    margin-left: 20px;
+    color: var(--primary-color);
+    transition: 250ms;
+    text-align: center;
+    opacity: 1;
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.editing {
+      color: var(--primary-color);
+      opacity: 1;
+    }
+
+    @media (min-width: 800px) {
+      opacity: 0;
+    }
+  }
+
+  .move {
+    cursor: move;
+  }
+
+  &Delete {
+    position: relative;
+    z-index: 20;
+    top: -2px;
+    margin-top: 20px;
+    font-size: 15px;
+    cursor: default;
+
+    > p {
+      margin-top: 0px;
+    }
+  }
+
+  .deleteBtn,
+  .cancelBtn {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 150ms;
+  }
+
+  .deleteBtn {
+    &:hover {
+      background-color: $color-error;
+      color: $color-white;
+    }
+  }
+
+  .cancelBtn {
+    &:hover {
+      background-color: $color-gray;
+      color: $color-white;
+    }
+  }
+
+  @media (min-width: 800px) {
+    position: absolute;
+    z-index: 10;
+    top: -10px;
+    right: 10px;
+    margin: 0;
+
+    &:after {
+      opacity: 0;
+    }
+
+    .editorBody & {
+      top: 11px;
+    }
+
+    &Delete {
+      display: inline-block;
+      margin: 0 0 0 10px;
+      padding: 0 0 0 5px;
+
+      > p {
+        display: inline-block;
+        margin-bottom: 0px;
+      }
+    }
+
+    .confirm {
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+}
+.customRangeImpacts label {
+  margin-right: 0;
+}
+.customLabelSpan {
+  height: 100% !important;
+  min-height: 20px;
+}
+
+.projectCardColor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.businessContainer {
+  > div {
+    margin-left: 0px;
+    > div > div > div {
+      margin-left: 0px;
+    }
+  }
+}
+
+.fullDetailContainer {
+  margin-left: 50px;
+  margin-top: 10px;
+
+  .fieldSelectorTitle {
+    font-size: 18px;
+  }
+
+  .fieldSelectorDescription {
+    font-size: 18px;
+  }
+}
+
+.projectTimestampOption {
+  margin-top: -10px !important;
+  font-weight: normal;
+  font-size: 14px !important;
+}

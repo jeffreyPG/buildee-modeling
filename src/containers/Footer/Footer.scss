@@ -1,0 +1,22 @@
+@import '../../styles/main.scss';
+
+.footer {
+  position: relative;
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: $color-white;
+  font-weight: bold;
+  padding: 12px 0;
+
+  a {
+    color: $color-white;
+    text-decoration: none;
+    display: block;
+    line-height: 0;
+    padding: 5px 0;
+  }
+
+  span {
+    padding: 0 5px;
+  }
+}

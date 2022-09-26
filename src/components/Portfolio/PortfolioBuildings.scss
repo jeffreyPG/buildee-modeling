@@ -1,0 +1,38 @@
+@import '../../styles/main.scss';
+@import '../../styles/components/extras.scss';
+@import '../../styles/components/tabs.scss';
+
+.reportContainer {
+  display: flex;
+  flex-flow: row wrap;
+  &Item {
+    width: 350px;
+    height: 180px;
+    padding: 20px;
+    border: 1px solid #e9edf1;
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    margin-inline-end: 30px;
+    cursor: pointer;
+  }
+}
+.title {
+  color: var(--primary-color);
+  padding-bottom: 20px;
+}
+.description {
+  font-size: 13px;
+}
+
+.buildingLoading {
+  position: fixed;
+  bottom: 50px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+}
+.initalCusor {
+  cursor: initial !important;
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/main.scss';
+
+
+form {
+  text-align: left;
+
+  > small {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+label {
+  padding: 5px 0;
+  display: block;
+}
+
+form .button {
+  width: auto;
+  margin: 20px auto;
+}
+
+.terms {
+  label {
+    padding-top: 0;
+  }
+  p span {
+    color: var(--link-color);
+    cursor: pointer;
+  }
+
+  span {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.field {
+  padding: 5px 0;
+
+  span {
+    background-color: red;
+    width: 100%;
+    display: block;
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  input {
+    &:invalid, &:focus {
+      border: 1px solid $color-white-darker;
+    }
+  }
+
+  :global(.invalid) {
+    input {
+      border: 1px solid $color-error;
+    }
+  }
+}

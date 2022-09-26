@@ -1,0 +1,234 @@
+@import '../../../styles/main.scss';
+
+.formWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bulkLocationHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.bulkDropdownStyle {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  bottom: 1em;
+  right: -1em;
+  overflow: auto;
+  width: calc(100% - 2em) !important;
+  @media (min-device-width: 1024px) {
+    width: 20em !important;
+    top: 25%;
+    left: calc(50% - 10em);
+    bottom: auto;
+    right: auto;
+    height: auto;
+  }
+}
+
+.firstField {
+  grid-area: firstrow1;
+}
+
+.secondField {
+  grid-area: firstrow2;
+}
+
+.thirdField {
+  grid-area: row3;
+}
+
+.fourthField {
+  grid-area: row4;
+}
+
+.fifthField {
+  grid-area: row5;
+}
+
+.sixthField {
+  grid-area: row6;
+}
+
+.form {
+  @extend .container;
+  padding-bottom: 0;
+
+  &Header{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    padding: 0 15px;
+
+    &Container{
+      background: #fff;
+      width: 100%;
+    }
+
+    &Title{
+      padding-right: 2em;
+      flex-grow: 1;
+    }
+
+    &Content{
+      flex-grow: 1;
+    }
+  }
+
+  &Section {
+    margin: 30px 0;
+
+    &Description {
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $color-gray;
+      }
+
+      @media (min-width: 800px) {
+        width: 25%;
+      }
+    }
+
+    &Inputs {
+      border-radius: 2px;
+
+      @media (min-width: 800px) {
+        width: 70%;
+        padding: 40px;
+      }
+
+      @media (min-width: 650px) {
+        padding: 20px;
+        border: 1px solid $color-white-darker;
+        background-color: $color-white;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  &Input {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input, textarea {
+      font-weight: 400;
+    }
+
+    textarea {
+      min-height: 60px;
+      max-width: 100%;
+
+      @media (min-width: 650px) {
+        min-height: 200px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Field {
+      border: 1px solid $color-white-darker;
+    }
+
+    &Fields {
+      display: grid;
+      grid-template-areas:
+      "firstrow1 firstrow2"
+      "row3 row3"
+      "row4 row4"
+      "row5 row5"
+      "row6 row6";
+
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 0.4em;
+      grid-column-gap: 1.2em;
+      overflow: auto;
+      @media (min-device-width : 1024px)  {
+        grid-template-areas:
+        "firstrow1 firstrow2"
+        "row3 row4"
+        "row5 row6";
+      }
+    }
+
+    &Fields + &Fields {
+      margin-top: 1.2em;
+    }
+  }
+
+  &Source {
+
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+
+  &Close {
+    cursor: pointer;
+  }
+
+  &Footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    border: 1px solid $color-white-darker;
+    box-shadow: 0 5px 18px -1px rgba($color-gray, 0.7);
+    padding: 0 1em;
+    @media (min-device-width : 1024px)  {
+      padding: 10px 0;
+    }
+
+    &Buttons {
+      margin-left: auto;
+    }
+
+    button {
+      display: inline-block;
+      width: auto;
+      margin-left: 10px;
+    }
+
+    &Container {
+      @extend .container;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+}

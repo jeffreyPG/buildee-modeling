@@ -1,0 +1,287 @@
+@import '../../../styles/main.scss';
+
+.formWrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.assetFormHeaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $color-white;
+  width: 100%;
+  z-index: 11;
+}
+.dayNavigator{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+
+  &Button{
+    width: 38px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0;
+    margin: 10px;
+  }
+}
+
+.formIconButton {
+  background: var(--primary-color);
+  color: $color-white;
+  border-radius: 50%;
+  padding: 0.5em;
+  margin: 0.33em;
+  cursor: pointer;
+}
+
+.buttonDropdown{
+  width: auto;
+  label {
+    display: none;
+  }
+
+  select {
+    @extend .button;
+    @extend .buttonPrimary;
+    text-align-last: center;
+  }
+}
+.formError {
+  color: $color-error;
+}
+
+.form {
+  @extend .container;
+  padding-bottom: 100px;
+
+
+  &Header{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    padding: 0 15px;
+    @media (max-width: 799px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &Container{
+      background: #fff;
+      width: 100%;
+    }
+
+    &Title{
+      padding-right: 2em;
+      flex-grow: 1;
+    }
+
+    &Content{
+      flex-grow: 1;
+      @media (max-width: 799px) {
+        white-space: nowrap;
+        overflow-x: scroll;
+        width: 100%;
+      }
+    }
+  }
+
+  &Section {
+    margin: 30px 0;
+
+    &Description {
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $color-gray;
+      }
+
+      @media (min-width: 800px) {
+        width: 25%;
+      }
+    }
+
+    &Inputs {
+      border-radius: 2px;
+
+      @media (min-width: 800px) {
+        width: 70%;
+        padding: 40px;
+      }
+
+      @media (min-width: 650px) {
+        padding: 20px;
+        border: 1px solid $color-white-darker;
+        background-color: $color-white;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+  &Input {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &Text {
+      line-height: 46px;
+      margin: 30px 15px 0;
+    }
+
+    &ErrorDiv {
+      margin-top: -50px;
+    }
+
+    &ErrorText {
+      font-size: 0.7rem;
+      color: red;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: $color-gray;
+    }
+
+    input, textarea {
+      font-weight: 400;
+    }
+
+    textarea {
+      min-height: 60px;
+      max-width: 100%;
+
+      @media (min-width: 650px) {
+        min-height: 200px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &Field {
+      border: 1px solid $color-white-darker;
+    }
+
+    &Row {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &Row + &Row {
+      margin-top: 1.2em;
+    }
+  }
+
+  &Source {
+
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+
+  &Close {
+    cursor: pointer;
+  }
+}
+.holidayButtonWeb{
+  display: unset;
+}
+.holidayButtonMob{
+  display: none;
+}
+@media (max-width: 699px)  {
+  .holidayButtonWeb{
+    display: none;
+  }
+  .holidayButtonMob{
+    display: unset;
+  }
+}
+.hourInput{
+  display: grid;
+  width: 90%;
+  grid-row-gap: 1em;
+  margin: 1.5em 0;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 3em;
+  &Calculated{
+    background-color: #f3f4f4;
+  }
+}
+
+.projectContainer{
+  margin-top: 30px;
+}
+.projectName{
+  color: var(--primary-color);
+  font-size: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.project{
+  display: flex;
+  margin-bottom: 10px;
+}
+.measureButton{
+  display: flex;
+  float: right;
+  button {
+    margin: 0;
+    width: auto;
+  }
+  @media (max-width: 600px) {
+    margin-top: 20px;
+  }
+}
+.date{
+  color: $color-gray;
+  &Container{
+    display: flex;
+    justify-content: space-between;
+    &Section{
+      width: 48%;
+    }
+  }
+}
+.projectsRerunning{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color-white, 0.85);
+  text-align: center;
+
+  h3 {
+    margin-top: 40px;
+  }
+}

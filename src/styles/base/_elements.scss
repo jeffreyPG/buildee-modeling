@@ -1,0 +1,59 @@
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $font-primary;
+  color: $color-text;
+  letter-spacing: 0.2px; /* Sub pixel letter spacing supported errywhere */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 500;
+}
+
+@mixin h3 {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+h3, h4 {
+  @include h3;
+}
+
+h5 {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+h6 {
+  font-size: 12px;
+  line-height: 21px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 24px;
+}

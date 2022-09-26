@@ -1,0 +1,14 @@
+@import '../../styles/main.scss';
+
+.hire {
+  text-align: center;
+  min-height: $minusHeader;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+

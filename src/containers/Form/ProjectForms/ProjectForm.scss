@@ -1,0 +1,176 @@
+@import '../../../styles/main.scss';
+
+.projectForm {
+  form {
+    padding-bottom: 100px;
+  }
+
+  &Section {
+    margin: 30px 0;
+
+    &Description {
+      margin-bottom: 20px;
+      padding-top: 20px;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $color-gray;
+      }
+
+      @media (min-width: 800px) {
+        width: 25%;
+      }
+    }
+
+    &Inputs {
+      border-radius: 2px;
+
+      @media (min-width: 800px) {
+        width: 70%;
+        padding: 40px;
+      }
+
+      @media (min-width: 650px) {
+        padding: 20px;
+        border: 1px solid $color-white-darker;
+        background-color: $color-white;
+      }
+    }
+
+    &Input {
+      margin-bottom: 40px;
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: $color-gray;
+      }
+
+      input,
+      textarea {
+        font-weight: 400;
+      }
+
+      textarea {
+        min-height: 60px;
+        max-width: 100%;
+
+        @media (min-width: 650px) {
+          min-height: 200px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &Source {
+    small {
+      cursor: pointer;
+      color: var(--link-color);
+    }
+  }
+
+  &Footer {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: $color-white;
+    border: 1px solid $color-white-darker;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button {
+      display: inline-block;
+      width: auto;
+      margin-left: 10px;
+    }
+
+    &Buttons {
+      display: flex;
+      margin-left: auto;
+    }
+
+    &Back {
+      text-transform: uppercase;
+      color: var(--link-color);
+      cursor: pointer;
+    }
+  }
+}
+
+.selectContainer {
+  border: 1px solid #e9edf1;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.field {
+  position: relative;
+  display: flex;
+}
+
+.selectIcons {
+  display: flex;
+  align-items: stretch;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.selectArrow {
+  align-self: center;
+  margin-right: 0.3em;
+}
+
+.loadingContainer {
+  position: fixed;
+  bottom: 200px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  font-size: 40px;
+  text-align: center;
+  z-index: 11;
+}
+
+.reRunProject {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  div {
+    background-color: white;
+    box-shadow: 0 0 7px 2px #888;
+    padding: 20px;
+    width: 300px;
+    font-size: 14px;
+    color: var(--primary-color);
+  }
+}
